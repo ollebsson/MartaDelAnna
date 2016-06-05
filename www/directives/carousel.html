@@ -1,0 +1,20 @@
+<div>
+	<uib-carousel active="active" interval="myInterval">
+		<uib-slide ng-repeat="slide in slides" index="slide.id">
+		  <div ng-style="slide.imageStyle" class="img-responsive carouselSlide">
+		  </div>
+
+		  <div class="container">
+			  <div class="col-md-12 col-md-offset-6">
+				  <div class="carousel-caption">
+						<h3>MARTA DELL'ANNA</h3>
+						<p>SUSTAINABLE <br> INTERIOR &amp; PRODUCT DESIGN</p>
+		      </div>
+		    </div>
+	    </div>
+		</uib-slide>
+	</uib-carousel>
+	<div class="preloader">
+		<div ng-repeat="slide in slides" ng-style="slide.imageStyle"></div>
+	</div>
+</div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+	<title>Marta Dell'Anna</title>
+	<meta charset="utf-8">
+	<!-- base href for Angular (HTML5 mode) -->
+	<base href="/">
+	<!-- meta tag for bootstrap (mobile devices) -->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<!-- all CSS -->
+	<link rel="stylesheet" href="css/all.css">
+	<!-- except the jquery-ui css, that comes here: -->
+	<link rel="stylesheet" href="libs/jquery-ui-1.11.4/jquery-ui.min.css">
+
+	<!-- JS libs -->
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-touch.min.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+	<script src="libs/angular-resource.min.js"></script>
+	<script src="libs/ui-bootstrap-tpls.min.js"></script>
+
+	<!-- our JS -->
+	<script src="app.js"></script>
+	<script src="controllers/navbarController.js"></script>
+	<script src="controllers/homeController.js"></script>
+
+	<!-- Directives -->
+	<script src="/directives/carousel.js"></script>
+
+	<!-- mongresto $resources -->
+	<script src="/api/ngresources/app"></script>
+
+	<!-- fonts -->
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+			<header>
+				<nav class="navbar navbar-default" ng-controller="navbarController">
+					<div class="container" id="header-content">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" ng-href="/" class="brand"><h3 id="logo">MARTA DELL'ANNA</h3></a>
+						</div>
+
+						<div class="navbar-collapse collapse" ng-class="isCollapsed ? '' : 'in'">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a>PORTFOLIO</a></li>
+								<li><a>ABOUT</a></li>
+								<li><a>CONTACT</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div>
+				<ng-view></ng-view>
+			</div>
+
+    <footer class="footer">
+    	<div class="container">
+    		<div class="row">
+    			<div class=".col-xs-12 text-center">
+    				<ul class="list-inline">
+    					<li><a ng-href="www.facebook.com">FACEBOOK</a></li>
+    					<li><a ng-href="www.twitter.com">TWITTER</a></li>
+    					<li><a ng-href="www.instagram.com">INSTAGRAM</a></li>
+    					<li><a ng-href="www.behance.net">BEHANCE</a></li>
+    				</ul>
+          		<p>© 2016 Copyright PURE - Created by MuseFrame</p>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+  </body>
+</html>
