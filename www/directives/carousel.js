@@ -7,16 +7,18 @@ app.directive('carousel', [function() {
         var slides = $scope.slides = [];
         $scope.myInterval = 20000;
         var currIndex = 0;
+
+        $scope.text = $scope.carouselCaption;
         // $scope.noWrapSlides = false;
         function getSlideHeight() {
                 return (($(window).height() - parseInt($('body').css('marginTop')))/1.3);
         }
-        var a = $scope.backgrounds;
-        console.log(a);
+
+        var background = $scope.backgrounds;
         $scope.addSlide = function() {
           slides.push({
             imageStyle: {
-              'background-image': 'url(/img/backgrounds/img' + (currIndex) + '.jpg)',
+              'background-image': 'url(' + background.image[i] + ')',
               height: getSlideHeight()
             },
             id: currIndex++
@@ -31,10 +33,12 @@ app.directive('carousel', [function() {
         }
 
         !$scope.$$phase && $scope.$apply();
+
         $scope.$on('$destroy', function() {
           $(window).off('resize', resizer);
         });
-        for (var i = 0; i < 2; i++) {
+
+        for (var i = 0; i < background.image.length; i++) {
           $scope.addSlide();
           console.log(slides)
         }
