@@ -11,14 +11,14 @@ app.directive('carousel', [function() {
         function getSlideHeight() {
                 return (($(window).height() - parseInt($('body').css('marginTop')))/1.3);
         }
-
+        var a = $scope.backgrounds;
+        console.log(a);
         $scope.addSlide = function() {
           slides.push({
             imageStyle: {
               'background-image': 'url(/img/backgrounds/img' + (currIndex) + '.jpg)',
               height: getSlideHeight()
             },
-            text: ['Nice image','Awesome photograph','That is so cool','I love that'][slides.length % 4],
             id: currIndex++
           });
         };

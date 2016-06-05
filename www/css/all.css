@@ -7339,49 +7339,6 @@ body {
   color: black;
   line-height: 1;
 }
-.carouselSlide {
-  /*background-size: cover;*/
-}
-.carousel-control {
-  display: none;
-}
-.carousel-indicators {
-  display: none;
-}
-carousel {
-  height: 100%;
-  width: 100%;
-  padding-bottom: 40px;
-}
-carousel .preloader {
-  position: absolute;
-  z-index: -100000;
-  visibility: hidden;
-}
-carousel .carousel-inner {
-  /*position: relative;*/
-  /*overflow: hidden;*/
-  width: 100%;
-  height: 100%;
-  /*z-index: 0;*/
-}
-carousel .carousel-inner .carouselSlide {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-carousel .carousel-caption {
-  margin-bottom: 131px;
-  opacity: 0.85;
-  background-color: white;
-  padding-top: 48px;
-  letter-spacing: 4px;
-  height: 210px;
-  color: black;
-  font-family: 'Source Code Pro';
-  left: 0%;
-  right: 0%;
-}
 @media (min-width: 601px) {
   #home-columns {
     margin-top: 6%;
@@ -7404,8 +7361,65 @@ carousel .carousel-caption {
 .icon {
   margin: 0 auto;
 }
+.article {
+  margin-bottom: 51px;
+}
 .footer {
   height: 150px;
-  padding-top: 4%;
   background-color: #F7F7F7;
+}
+@media (min-width: 600px) {
+  .footer {
+    padding-top: 4%;
+  }
+}
+@media (max-width: 599px) {
+  .footer {
+    padding-top: 16%;
+  }
+}
+.carousel-control {
+  display: none;
+}
+.carousel-indicators {
+  display: none;
+}
+carousel {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 40px;
+  z-index: -1000;
+}
+carousel .preloader {
+  position: absolute;
+  z-index: -100000;
+  visibility: hidden;
+}
+carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+}
+carousel .carousel-inner .carouselSlide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+carousel .carousel-caption {
+  opacity: 0.85;
+  background-color: white;
+  padding-top: 48px;
+  letter-spacing: 4px;
+  height: 210px;
+  color: black;
+  max-width: 477px;
+  min-width: 300px;
+  font-family: 'Source Code Pro';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
