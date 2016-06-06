@@ -1,7 +1,17 @@
 <uib-tabset type="pills">
 
-  <uib-tab heading="ALL CATEGORIES">
-  	Tab 0 content
+  <uib-tab heading="ALL">
+  	<div class="container">
+  		<div class="row">
+		  	<div ng-repeat="item in items">
+					<div class="col-md-6 col-xs-24-centered">
+		  			<div class="first-row" style="background-image: url({{ items[$index].media[0] }})">
+
+		  			</div>
+		  		</div>
+			  </div>
+		  </div>
+	  </div>
   </uib-tab>
 
   <uib-tab heading="INTERIOR">
@@ -15,6 +25,5 @@
   <uib-tab heading="PRODUCTS">
   	Tab 3 content
   </uib-tab>
-
 
 </uib-tabset>

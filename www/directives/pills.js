@@ -2,22 +2,23 @@ app.directive('pills', [function() {
 
   return {
     templateUrl: '/directives/pills.html',
-    controller: ['$scope', function($scope) {
-      
-      $scope.tabs = [
-          { title:'Dynamic Title 1', content:'Dynamic content 1' },
-          { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-        ];
+    controller: ['$scope', 'item', function($scope, item) {
 
-        $scope.alertMe = function() {
-          setTimeout(function() {
-            $window.alert('You\'ve selected the alert tab!');
-          });
-        };
+      function loadItems(data) {
+        $scope.items = data || item.get(function(data) {
+          console.log(data);
+          console.log(data[0]);
+          console.log(data[0].media);
+          console.log($scope.items[0].media[0]);
+        });
+      }
+      loadItems();
 
-        $scope.model = {
-          name: 'Tabs'
-        };
+      // $scope.firstRowStyle = {
+      //   "background-image" : 
+      // }
+
+
     }]
   };
 }]);
