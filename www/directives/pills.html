@@ -4,9 +4,10 @@
   	<div class="container">
   		<div class="row">
 		  	<div ng-repeat="item in items">
-					<div class="col-md-6 col-xs-24-centered">
+					<div class="col-md-6 col-xs-24">
 		  			<div class="first-row" style="background-image: url({{ items[$index].media[0] }})">
-
+		  				<h4 class="item-title"><bold>{{ items[$index].title }}</bold></h4>
+		  				<p>{{ items[$index].categories }}</p>
 		  			</div>
 		  		</div>
 			  </div>
