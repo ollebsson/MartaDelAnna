@@ -13,8 +13,8 @@ app.directive('carousel', [function() {
         function getSlideHeight() {
                 return (($(window).height() - parseInt($('body').css('marginTop')))/1.3);
         }
-
         var background = $scope.backgrounds;
+
         $scope.addSlide = function() {
           slides.push({
             imageStyle: {

@@ -7367,6 +7367,11 @@ body {
   font-weight: 700;
   margin-top: 197px;
 }
+.item-description {
+  color: #777777;
+  font-size: 13px;
+  line-height: 23px;
+}
 @media (min-width: 601px) {
   #home-columns {
     margin-top: 6%;
