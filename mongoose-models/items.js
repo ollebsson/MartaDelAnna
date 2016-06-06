@@ -1,6 +1,6 @@
 module.exports = function(mongoose){
 
-  var itemSchema = mongoose.Schema({
+  var ItemSchema = mongoose.Schema({
     title: {type: String, required: true},
     categories: {type: String, required: true},
     architects: {type: String, required: false},
@@ -17,5 +17,5 @@ module.exports = function(mongoose){
     urlName: {type: String, required: false}
   });
 
-  return mongoose.model("item", itemSchema);
+  return mongoose.model("Item", ItemSchema);
 };

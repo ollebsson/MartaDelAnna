@@ -17,7 +17,8 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
 	.when("/portfolio",{
 		templateUrl: "templates/portfolio.html",
 		controller: "portfolioCtrl"
-	})	.when("/portfolio:id",{
+	})
+	.when("/portfolio/:id",{
 		templateUrl: "templates/detailView.html",
 		controller: "detailViewCtrl"
 	})
