@@ -2,7 +2,7 @@ app.directive('carousel', [function() {
 
   return {
     templateUrl: '/directives/carousel.html',
-    controller: ['$scope', '$route', '$timeOut' function($scope, $route, $timeOut) {
+    controller: ['$scope', '$route', function($scope, $route) {
         $scope.active = 0;
         var slides = $scope.slides = [];
         $scope.myInterval = 20000;
@@ -41,7 +41,6 @@ app.directive('carousel', [function() {
 
         console.log($scope.backgrounds);
 
-        $setTimeout(function() {}, 10);
         for (var i = 0; i < background.image.length; i++) {
           $scope.addSlide();
           console.log(slides)
