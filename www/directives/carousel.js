@@ -11,6 +11,9 @@ app.directive('carousel', [function() {
         $scope.text = $scope.carouselCaption;
         var background = $scope.backgrounds;
         // $scope.noWrapSlides = false;
+        $scope.$watch('background', function() {
+          console.log("background change: " + background);
+        })
         function getSlideHeight() {
                 return (($(window).height() - parseInt($('body').css('marginTop')))/1.3);
         }
