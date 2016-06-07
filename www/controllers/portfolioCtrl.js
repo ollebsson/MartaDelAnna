@@ -3,9 +3,9 @@ app.controller('portfolioCtrl',  ['$scope', 'Item', function($scope, Item){
 	$scope.backgrounds = { image: ["img/backgrounds/portfolio.jpg"] };
 	$scope.carouselCaption = { title: "PORTFOLIO"};
 
-	Item.get({},function(data){if(!data.length){addHome();}});
+	Item.get({},function(data){if(!data.length){addItems();}});
 
-	function addProperties() {
+	function addItems() {
 		Item.create([
 			{
 				title: "BIANCHI MALMÖ",
@@ -36,8 +36,8 @@ app.controller('portfolioCtrl',  ['$scope', 'Item', function($scope, Item){
 	    	url: ["http://www.aktivortopedteknik.se/a.949/stories/ett-unikt-centrum.aspx",
 	      "http://www.aktivortopedteknik.se/documents/45/7/Articles/949/1/grand_opening_-_aktiv_ortopedteknik_malm___sv_.pdf"],
 	    	media: [
-					"img/items/bianchi0.jpg",
-	      	"img/items/bianchi1.jpg"
+					"img/items/aktiv0.jpg",
+	      	"img/items/aktiv1.jpg"
 	    	]
 			}
 
