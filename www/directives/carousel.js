@@ -2,19 +2,20 @@ app.directive('carousel', [function() {
 
   return {
     templateUrl: '/directives/carousel.html',
-    controller: ['$scope', '$route', function($scope, $route) {
+    controller: ['$scope', '$route', '$timeOut' function($scope, $route, $timeOut) {
         $scope.active = 0;
         var slides = $scope.slides = [];
         $scope.myInterval = 20000;
         var currIndex = 0;
 
         $scope.text = $scope.carouselCaption;
+        var background = $scope.backgrounds;
         // $scope.noWrapSlides = false;
         function getSlideHeight() {
                 return (($(window).height() - parseInt($('body').css('marginTop')))/1.3);
         }
-        var background = $scope.backgrounds;
 
+       
         $scope.addSlide = function() {
           slides.push({
             imageStyle: {
@@ -38,6 +39,9 @@ app.directive('carousel', [function() {
           $(window).off('resize', resizer);
         });
 
+        console.log($scope.backgrounds);
+
+        $setTimeout(function() {}, 10);
         for (var i = 0; i < background.image.length; i++) {
           $scope.addSlide();
           console.log(slides)

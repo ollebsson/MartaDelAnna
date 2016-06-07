@@ -1,13 +1,12 @@
 app.controller('detailViewCtrl', ['$scope', '$routeParams', 'Item', function($scope, $routeParams, Item){
 		var object;
 		var id = $routeParams.id;
-	  Item.getById({_id: id}, function(data) {
+	  Item.getById({id: id}, function(data) {
     	$scope.item = data;
-    	object += data;
-			$scope.backgrounds = { image: [data.media[0]]};
-			$scope.carouselCaption = { title: data.title, text1: data.categories }
+			$scope.backgrounds = { image: [$scope.item.media[0]]};
+			$scope.carouselCaption = { title: data.title, text1: data.categories };
+    	console.log(data);
 			console.log($scope.backgrounds);
   	});
-  	console.log(object);
 
 }]);
