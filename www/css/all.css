@@ -7371,6 +7371,14 @@ body {
   color: #777777;
   font-size: 13px;
   line-height: 23px;
+  margin-top: 40px;
+}
+.item-properties {
+  color: #777777;
+  line-height: 23px;
+  margin-top: 49px;
+  font-size: 13px;
+  font-weight: 400;
 }
 @media (min-width: 601px) {
   #home-columns {
@@ -7393,6 +7401,7 @@ body {
 }
 .icon {
   margin: 0 auto;
+  height: 58px;
 }
 .article {
   margin-bottom: 51px;

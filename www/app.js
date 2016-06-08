@@ -20,7 +20,7 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
 	})
 	.when("/portfolio/:id",{
 		templateUrl: "templates/detailView.html",
-		controller: "detailViewCtrl"
+		controller: "detailViewCtrl",
 	})
 	.otherwise({
 		templateUrl: "templates/home.html"

@@ -3,17 +3,17 @@ app.directive('carousel', [function() {
   return {
     templateUrl: '/directives/carousel.html',
     controller: ['$scope', '$route', function($scope, $route) {
-        $scope.active = 0;
+        // $scope.active = 0;
         var slides = $scope.slides = [];
-        $scope.myInterval = 20000;
+        $scope.myInterval = 10000;
         var currIndex = 0;
 
-        $scope.text = $scope.carouselCaption;
+        var caption = $scope.carouselCaption;
         var background = $scope.backgrounds;
-        // $scope.noWrapSlides = false;
-        $scope.$watch('background', function() {
-          console.log("background change: " + background);
-        })
+        $scope.noWrapSlides = false;
+        $scope.noPause = false;
+        // $scope.noTransition = true;
+
         function getSlideHeight() {
                 return (($(window).height() - parseInt($('body').css('marginTop')))/1.3);
         }
@@ -22,8 +22,8 @@ app.directive('carousel', [function() {
         $scope.addSlide = function() {
           slides.push({
             imageStyle: {
-              'background-image': 'url(' + background.image[i] + ')',
-              height: getSlideHeight()
+              'background-image': 'url(' + background.image[currIndex] + ')',
+              height: "400px"
             },
             id: currIndex++
           });
@@ -35,19 +35,26 @@ app.directive('carousel', [function() {
             console.log("resize: " + s.imageStyle.height)
           });
         }
+        $scope.$watchGroup(['backgrounds', 'carouselCaption'], function() {
+          background = $scope.backgrounds;
+          caption = $scope.carouselCaption;
+          if(background)  {  
+            for (var i = 0; i < background.image.length; i++) {
+              $scope.addSlide();
+              console.log(slides)
+            }
+          }
+          if(caption) {
+            $scope.text = caption;
+          }
 
-        !$scope.$$phase && $scope.$apply();
 
-        $scope.$on('$destroy', function() {
-          $(window).off('resize', resizer);
         });
 
-        console.log($scope.backgrounds);
+        // $scope.$watch('text', function() {})
+        // console.log($scope.backgrounds);
 
-        for (var i = 0; i < background.image.length; i++) {
-          $scope.addSlide();
-          console.log(slides)
-        }
+
     }]
   };
 }]);

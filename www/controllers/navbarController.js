@@ -3,8 +3,9 @@ app.controller('navbarController', ['$scope', function($scope){
 
   console.log($scope.isCollapsed);
 
-  // $scope.clickCollapse = function() {
-  // 	$scope.isCollapsed = true;
-  // 	console.log("clicked");
-  // }
+  $scope.clickCollapse = function() {
+  	$scope.isCollapsed = true;
+  	console.log("clicked");
+  }
+
 }]);
