@@ -41,7 +41,7 @@ app.directive('carousel', [function() {
           if(background)  {  
             for (var i = 0; i < background.image.length; i++) {
               $scope.addSlide();
-              console.log(slides)
+              
             }
           }
           if(caption) {
@@ -51,8 +51,7 @@ app.directive('carousel', [function() {
 
         });
 
-        // $scope.$watch('text', function() {})
-        // console.log($scope.backgrounds);
+
 
 
     }]

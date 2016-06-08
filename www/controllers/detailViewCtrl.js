@@ -5,49 +5,26 @@ app.controller('detailViewCtrl', ['$scope', '$routeParams', 'Item', function($sc
     	$scope.item = data;
 			$scope.carouselCaption = { title: data.title, text1: data.categories };
 			$scope.backgrounds = { image: [$scope.item.media[0]]};
-			console.log($scope.backgrounds);
-    	console.log(data.media.length);
 
-			// var i = 0;                     //  set your counter to 1
-   //    var restartCounter = data.media.length;
-
-			// function myLoop () {
-			// 	$scope.slideShow = data.media[0];           //  create a loop function
-			//    setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-			//       $scope.slideShow = data.media[i];        //  your code here
-			//       i++;                     //  increment the counter
-			//       if (i < restartCounter) {            //  if the counter < 10, call the loop function
-			//          myLoop();             //  ..  again which will trigger another 
-			//       }
-			//                            //  ..  setTimeout()
-			//    }, 1000)
-			// }
+					// Lower carousel
 			var i = 0;
-			var a;
-			        // $scope.$watch('text', function() {})
-        // console.log($scope.backgrounds);
-
-			restartCounter = data.media.length;
-			setInterval(function() {
-				// for (var i = 0; i < data.media.length; i++) {
-				// 	Things[i]
-				// }
-					i++;
-					if(i === data.media.length) {
+			var restartCounter = data.media.length;
+      $scope.slideShow = 'background-image:' + 'url("' + data.media[0] + '");';
+			$scope.$watch('slideShow', function() {
+				setInterval(function() {
+					$scope.slideShow = 'background-image:' + 'url("' + data.media[i] + '");';
+					++i;
+					if(i === restartCounter) {
 						i = 0;
 					}
-					$scope.slideShow = data.media[i];
-					 // $scope.$watch('slideShow', function() {
-
-					 // }
-					console.log(i);
-					console.log(data.media[i]);
 			}, 5000);
-			console.log($scope.slideShow);
-
-
-
+			});
   	});
+
+	  Item.get({categories: "INTERIOR DESIGN"},function(data) {
+	  	console.log(data);
+	  })
+
 
 
 }]);
