@@ -12,6 +12,8 @@ module.exports = function(mongoose){
     paragraph2: {type: String, required: false},
     paragraph3: {type: String, required: false},
     paragraph4: {type: String, required: false},
+    paragraph5: {type: String, required: false},
+    paragraph6: {type: String, required: false},
     media: {type: Array, required: false},
     url: {type: Array, required: false},
     urlName: {type: String, required: false}
