@@ -3,17 +3,29 @@
   <uib-tab heading="ALL">
   	<div class="container">
   		<div class="row">
-		  	<div ng-repeat="item in items">
-					<div class="col-md-6 col-xs-24">
-		  			<a ng-href="/portfolio/{{items[$index]._id}}"><div class="first-row"  style="background-image: url({{ items[$index].media[0] }})">
-		  				<h4 class="item-title"><bold>{{ items[$index].title }}</bold></h4>
-		  				<p>{{ items[$index].categories }}</p>
+		  	<div ng-repeat="item in firstRow">
+					<div class="col-md-6 col-xs-12">
+		  			<a ng-href="/portfolio/{{firstRow[$index]._id}}"><div class="first-row"  style="background-image: url({{ firstRow[$index].media[0] }})">
+		  				<h4 class="item-title"><bold>{{ firstRow[$index].title }}</bold></h4>
+		  				<p>{{ firstRow[$index].categories }}</p>
 		  			</div>
 		  			</a>
 		  		</div>
 			  </div>
 		  </div>
-	  </div>
+
+      <div class="row">
+        <div ng-repeat="item in secondRow">
+          <div class="col-md-12 col-xs-24">
+            <a ng-href="/portfolio/{{secondRow[$index]._id}}"><div class="second-row"  style="background-image: url({{ secondRow[$index].media[0] }})">
+              <h4 class="item-title"><bold>{{ secondRow[$index].title }}</bold></h4>
+              <p>{{ secondRow[$index].categories }}</p>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
+	  </div>  
   </uib-tab>
 
   <uib-tab heading="INTERIOR">

@@ -5,11 +5,22 @@ app.directive('pills', [function() {
     controller: ['$scope', 'Item', function($scope, Item) {
 
       function loadItems(data) {
-        $scope.items = data || Item.get(function(data) {
+        var items = data || Item.get(function(data) {
           console.log(data);
-          console.log(data[0]);
-          console.log(data[0].media);
-          console.log($scope.items[0].media[0]);
+        // First row 
+        var first = [];
+        for (var i = 0; i < 4; i++) {
+          first.push(items[i]);
+        }
+        $scope.firstRow = first;
+
+        // Second row
+
+        var second = [];
+        for (var i = 4; i < 6; i++) {
+          second.push(items[i]);
+        }
+        $scope.secondRow = second;
         });
       }
       loadItems();
