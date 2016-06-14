@@ -28,6 +28,8 @@
 	<script src="controllers/homeController.js"></script>
 	<script src="controllers/portfolioCtrl.js"></script>
 	<script src="controllers/detailViewCtrl.js"></script>
+	<script src="controllers/aboutCtrl.js"></script>
+	<script src="controllers/tabs.js"></script>
 
 	<!-- Directives -->
 	<script src="/directives/carousel.js"></script>
@@ -58,7 +60,7 @@
 						<div class="navbar-collapse collapse" ng-class="isCollapsed ? '' : 'in'">
 							<ul class="nav navbar-nav navbar-right">
 								<li><a class="navbar-link" ng-href="/portfolio" ng-click="clickCollapse()">PORTFOLIO</a></li>
-								<li><a>ABOUT</a></li>
+								<li><a class="navbar-link" ng-href="/about" ng-click="clickCollapse()">ABOUT</a></li>
 								<li><a>CONTACT</a></li>
 							</ul>
 						</div>

@@ -7339,6 +7339,9 @@ body {
   color: black;
   line-height: 1;
 }
+.tabs {
+  margin-top: 20px;
+}
 @media (min-width: 601px) {
   #home-columns {
     margin-top: 6%;
@@ -7530,71 +7533,81 @@ carousel .carousel-caption h3 {
     background-repeat: no-repeat;
   }
 }
-@media (min-width: 1000px) {
-  .first-row,
-  .second-row,
-  .third-row,
-  .fourth-row {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    padding: 10px;
-    color: transparent;
-  }
-  .first-row:hover,
-  .second-row:hover,
-  .third-row:hover,
-  .fourth-row:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    transition: 1.2s ease;
-    cursor: pointer;
-    text-decoration: underline;
-    color: white;
-  }
-  .first-row-content,
-  .second-row-content,
-  .third-row-content,
-  .fourth-row-content {
-    height: 100%;
-    background-size: cover;
-    margin-bottom: 10px;
-    padding-top: 20px;
-  }
-  .first-row {
-    height: 275px;
-  }
-  .second-row {
-    height: 540px;
-  }
-  .third-row {
-    height: 316px;
-  }
-  .fourth-row {
-    height: 527px;
-  }
+/*@media(min-width: 1000px ) {*/
+.first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.fifth-row,
+.sixth-row,
+.seventh-row {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  padding: 10px;
+  color: transparent;
 }
-@media (max-width: 900px) {
-  /*.first-row {
-	height: 275px;
-	}
-
-
-	.second-row {
-		height: 540px;
-		background-size: cover;
-	}
-	.third-row {
-		height: 316px;
-		background-size: cover;
-	}
-	.fourth-row {
-		height: 316px;
-		background-size: cover;
-	}*/
+.first-row:hover,
+.second-row:hover,
+.third-row:hover,
+.fourth-row:hover,
+.fifth-row:hover,
+.sixth-row:hover,
+.seventh-row:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-decoration: underline;
+  color: white;
 }
+.first-row:hover .title-box,
+.second-row:hover .title-box,
+.third-row:hover .title-box,
+.fourth-row:hover .title-box,
+.fifth-row:hover .title-box,
+.sixth-row:hover .title-box,
+.seventh-row:hover .title-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 0.3s ease;
+}
+.row-content {
+  height: 100%;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  position: relative;
+}
+.first-row {
+  height: 275px;
+}
+.second-row {
+  height: 540px;
+}
+.third-row {
+  height: 316px;
+}
+.fourth-row {
+  height: 527px;
+}
+.fifth-row {
+  height: 383px;
+}
+.sixth-row {
+  height: 539px;
+}
+.seventh-row {
+  height: 270px;
+}
+/*} */
 .tab-content {
   text-align: center;
 }
 .item-title {
   font-weight: 700;
+}
+.title-box {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
 }

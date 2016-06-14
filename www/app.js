@@ -18,6 +18,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
 		templateUrl: "templates/portfolio.html",
 		controller: "portfolioCtrl"
 	})
+	.when("/about",{
+		templateUrl: "templates/about.html",
+		controller: "aboutCtrl"
+	})
 	.when("/portfolio/:id",{
 		templateUrl: "templates/detailView.html",
 		controller: "detailViewCtrl",
