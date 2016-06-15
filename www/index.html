@@ -30,10 +30,16 @@
 	<script src="controllers/detailViewCtrl.js"></script>
 	<script src="controllers/aboutCtrl.js"></script>
 	<script src="controllers/tabs.js"></script>
+	<script src="controllers/collapse.js"></script>
 
 	<!-- Directives -->
 	<script src="/directives/carousel.js"></script>
 	<script src="/directives/pills.js"></script>
+	<script src="/directives/modal.js"></script>
+
+	<!-- Modals -->
+	<script src="/modals/modalInstance.js"></script>
+
 
 	<!-- mongresto $resources -->
 	<script src="/api/ngresources/app"></script>
@@ -61,7 +67,7 @@
 							<ul class="nav navbar-nav navbar-right">
 								<li><a class="navbar-link" ng-href="/portfolio" ng-click="clickCollapse()">PORTFOLIO</a></li>
 								<li><a class="navbar-link" ng-href="/about" ng-click="clickCollapse()">ABOUT</a></li>
-								<li><a>CONTACT</a></li>
+								<li><a ng-click="openModal()"><modal></modal>CONTACT</a></li>
 							</ul>
 						</div>
 					</div>

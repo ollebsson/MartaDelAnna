@@ -1,0 +1,47 @@
+<div class="modal-header">
+	<a class="close" data-dismiss="modal" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span></a>
+	<h3 class="modal-title">GET IN TOUCH</h3>
+	<h3>-</h3>
+</div>
+<div class="modal-body">
+
+	<form>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-md-offset-2">
+					<div class="form-group">
+						<input name="name" ng-model="customer.name" type="text" class="form-control" id="name" placeholder="Your name">
+					</div>
+				</div>
+
+				<div class="col-md-7">
+					<div class="form-group">
+						<input name="adress" ng-model="customer.email" type="text" class="form-control" id="adress" placeholder="Your e-mail">
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-13 col-md-offset-2">
+				<div class="form-group">
+					<input name="zipCode" ng-model="customer.subject" type="text" class="form-control" id="zipCode" placeholder="Subject">
+				</div>
+			</div>
+
+			<div class="col-md-13 col-md-offset-2">
+				<div class="form-group">
+					<input name="city" ng-model="customer.message" type="text" class="form-control" id="city" placeholder="Add message..">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<!-- "Ok" button is disabled if user has not selected an option! -->
+	<button
+	class="btn btn-primary"
+	type="button"
+	ng-click="ok()"
+	>SUBMIT</button>
+	<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>
