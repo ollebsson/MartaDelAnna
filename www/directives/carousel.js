@@ -23,7 +23,7 @@ app.directive('carousel', [function() {
           slides.push({
             imageStyle: {
               'background-image': 'url(' + background.image[currIndex] + ')',
-              height: "400px"
+              height: getSlideHeight()
             },
             id: currIndex++
           });

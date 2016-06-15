@@ -52,8 +52,8 @@ app.directive('pills', [function() {
         }
         $scope.ninthRow = ninth;
 
-        $scope.tenthRow = items[13];
-        $scope.eleventhRow = items[14];
+        $scope.tenthRow = items[15];
+        $scope.eleventhRow = items[16];
         });
 
 

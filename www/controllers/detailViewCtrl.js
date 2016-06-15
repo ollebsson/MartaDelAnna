@@ -17,7 +17,7 @@ app.controller('detailViewCtrl', ['$scope', '$routeParams', 'Item', function($sc
 					if(i === restartCounter) {
 						i = 0;
 					}
-			}, 5000);
+			}, 2000);
 			});
   	});
 
