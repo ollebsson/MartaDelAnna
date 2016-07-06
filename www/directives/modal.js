@@ -29,9 +29,9 @@ app.directive('modal', [function() {
           // "done" (user said OK)
           function (customerFormData) {
             
-            customer.create(customerFormData);
+            Customer.create(customerFormData);
 
-
+            console.log(customerFormData);
             // selected option is sent to us from the modal controller
             // ($uibModalInstance.close($scope.selectedOption))
           }, function () {

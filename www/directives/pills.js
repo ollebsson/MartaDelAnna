@@ -29,15 +29,8 @@ app.directive('pills', [function() {
         }
         $scope.thirdRow = third;
 
-        // var fourth;
-        // for (var l = 8; l < 9; l++) {
-          // fourth.push(items[8]);
         $scope.fourthRow = items[8];
-        // }
-        // var fifth = [];
-        // for (var m = 9; m < 10; m++) {
-          // fifth.push(items[9]);
-        // }
+
         $scope.fifthRow = items[9];
 
         $scope.sixthRow = items[10];
@@ -55,16 +48,6 @@ app.directive('pills', [function() {
         $scope.tenthRow = items[15];
         $scope.eleventhRow = items[16];
         });
-
-
-        // var sixth = [];
-        // for (var k = 10; k < ; k++) {
-        //   sixth.push(items[k]);
-        // }
-        // $scope.sixthRow = sixth;
-
-
-
 
       }
 
@@ -90,10 +73,6 @@ app.directive('pills', [function() {
       loadInterior();
       loadScenography();
       loadProduct();
-      // $scope.firstRowStyle = {
-      //   "background-image" : 
-      // }
-
 
     }]
   };

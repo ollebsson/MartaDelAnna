@@ -5,7 +5,7 @@ app.controller('modalInstance', ['$scope', '$uibModalInstance', function($scope,
 
   $scope.ok = function() {
 
-
+    $scope.notification = "Thank you! I'll contact you as soon as possible";
     // user approves om seleted option
     // so send the selected option back to the myModal directive
     // (modalInstance.result.then(...))
