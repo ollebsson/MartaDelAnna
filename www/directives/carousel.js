@@ -3,7 +3,6 @@ app.directive('carousel', [function() {
   return {
     templateUrl: '/directives/carousel.html',
     controller: ['$scope', '$route', function($scope, $route) {
-        // $scope.active = 0;
         var slides = $scope.slides = [];
         $scope.myInterval = 10000;
         var currIndex = 0;
@@ -34,6 +33,7 @@ app.directive('carousel', [function() {
             s.imageStyle.height = getSlideHeight();
             console.log("resize: " + s.imageStyle.height)
           });
+          !$scope.$$phase && $scope.$apply();
         }
         $scope.$watchGroup(['backgrounds', 'carouselCaption'], function() {
           background = $scope.backgrounds;
@@ -51,7 +51,9 @@ app.directive('carousel', [function() {
 
         });
 
-
+        $scope.$on('$destroy', function() {
+          $(window).off('resize', resizer);
+        });
 
 
     }]
