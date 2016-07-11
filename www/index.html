@@ -32,6 +32,9 @@
 	<script src="controllers/tabs.js"></script>
 	<script src="controllers/collapse.js"></script>
 	<script src="controllers/form.js"></script>
+	<script src="controllers/interior.js"></script>
+	<script src="controllers/product.js"></script>
+	<script src="controllers/scenography.js"></script>
 
 	<!-- Directives -->
 	<script src="/directives/carousel.js"></script>
@@ -66,9 +69,9 @@
 
 						<div class="navbar-collapse collapse" ng-class="isCollapsed ? '' : 'in'">
 							<ul class="nav navbar-nav navbar-right">
-								<li><a class="navbar-link" ng-href="/portfolio" ng-click="clickCollapse()">PORTFOLIO</a></li>
-								<li><a class="navbar-link" ng-href="/about" ng-click="clickCollapse()">ABOUT</a></li>
-								<li><a ng-click="openModal()"><modal></modal>CONTACT</a></li>
+								<li><a ng-href="/portfolio" ng-click="clickCollapse()">PORTFOLIO</a></li>
+								<li><a ng-href="/about" ng-click="clickCollapse()">ABOUT</a></li>
+								<li><a ng-click="openModal()" id="contact"><modal></modal>CONTACT</a></li>
 							</ul>
 						</div>
 					</div>

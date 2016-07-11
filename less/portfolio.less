@@ -4,41 +4,55 @@
 	.first-row:hover, .second-row:hover, .third-row:hover, .fourth-row:hover, .fifth-row:hover, .sixth-row:hover, .seventh-row:hover {
 		-webkit-filter: grayscale(0%); 
 	  filter: grayscale(0%);
-	  transition: 0.3s ease;
 	  cursor: pointer;
-		text-decoration: underline;
-		color: white;
+	text-decoration: underline;
+	color: white;
+	}
+	.first-row .title-box, .second-row .title-box, .third-row .title-box, .fourth-row .title-box, .fifth-row .titlebox, .sixth-row .title-box, .seventh-row .title-box {
+		background-color: rgba(0, 0, 0, 0);
+		color: transparent;
+		transition: 0.3s ease-in-out;
 	}
 	.first-row:hover .title-box, .second-row:hover .title-box, .third-row:hover .title-box, .fourth-row:hover .title-box, .fifth-row:hover .title-box, .sixth-row:hover .title-box, .seventh-row:hover .title-box {
-		background-color: rgba(0,0,0,0.7);
-		transition: 0.3s ease;
+		background-color: rgba(0, 0, 0, 0.7);
+		color: white;
 	}
 
 	.first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row, .seventh-row {
 		-webkit-filter: grayscale(100%); 
 	  filter: grayscale(100%);
-	  padding: 10px;
 	  color: transparent;
+		transition: 0.3s ease-in-out;
 
 	}
-} 
-	.first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row, .seventh-row {
-	  /*-webkit-filter: grayscale(100%); */
-	  /*filter: grayscale(100%);*/
-	  padding: 10px;
-	  /*color: transparent;*/
-
+	.tabs {
+		padding: 5px;
 	}
+}	
+
+/* End of media query */
+@media(max-width: 900px ) {
+
+	.first-row .title-box, .second-row .title-box, .third-row .title-box, .fourth-row .title-box, .fifth-row .titlebox, .sixth-row .title-box, .seventh-row .title-box {
+		background-color: rgba(0,0,0,0.7);
+	}
+}
 	.row-content {
 		height: 100%;
 		background-size: cover;
 		margin-bottom: 10px;
 		padding-top: 20px;
 		position: relative;
+		color: white;
+		text-align: center;
 	}	
 
+	.first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row, .seventh-row, {
+		text-decoration: underline;
+		padding: 10px;
+	}
 	.first-row {
-		height: 275px;
+		height: 270px;
 	}
 	.second-row {
 		height: 540px;
@@ -59,8 +73,8 @@
 	}
 	.seventh-row {
 		height: 270px;
-	}
 
+} 
 
 
 
@@ -73,7 +87,32 @@
 .title-box {
 	position: absolute;
  	bottom: 20px;
-  width: 100%;
-  background-color: rgba(0,0,0,0);
+	width: 100%;
 } 
-   
+.btn {
+	width: 117px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+.btn:hover {
+	color: white;
+	background-color: black;
+	border-radius: 0px;
+	transition: 0.4s;
+}
+.btn:focus {
+	color: white;
+	background-color: black;
+	border-image: 0px;
+}
+button#active {
+	background-color: black;
+	border-radius: 0px;
+	color: white;
+}
+#button-right {
+	margin-left: 10px;
+}
+#pills {
+	text-align: center;
+}

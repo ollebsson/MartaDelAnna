@@ -1,8 +1,159 @@
 <carousel></carousel>
 
-		<div class="main">
+<div class="container">
 
-			<pills>
+	<div class="col-xs-24 tabs">
+		<h4 id="pills"><button type="button" id="active" class="btn">ALL</button>
+		<a ng-href="/portfolio/interior"><button type="button" class="btn">INTERIOR</button></a>
+		<a ng-href="/portfolio/scenography"><button type="button" class="btn">SCENOGRAPHY</button></a>
+		<a ng-href="/portfolio/product"><button type="button" class="btn">PRODUCTS</button></a></h4>
+	</div>
 
-			</pills>
-		</div>
+</div>
+
+  	<div class="container list-view">
+
+  		<div class="row">
+        <div ng-repeat="item in firstRow">
+          <a class="portfolio-link" ng-href="/portfolio/{{firstRow[$index]._id}}">
+            <div class="col-sm-6 col-xs-24 first-row">
+              <div class="row-content" style="background-image: url({{ firstRow[$index].media[0] }})">
+                <div class="title-box">
+	  				<h4 class="item-title"><bold>{{ firstRow[$index].title }}</bold></h4>
+	  				<p>{{ firstRow[$index].categories }}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+			</div>
+
+      <div class="row">
+        <div ng-repeat="item in secondRow">
+          <a class="portfolio-link" ng-href="/portfolio/{{secondRow[$index]._id}}">
+            <div class="col-sm-12 col-xs-24 second-row">
+              <div class="row-content" style="background-image: url({{ secondRow[$index].media[0] }})">
+                <div class="title-box">
+                  <h4 class="item-title"><bold>{{ secondRow[$index].title }}</bold></h4>
+                  <p>{{ secondRow[$index].categories }}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div ng-repeat="item in thirdRow">
+          <a class="portfolio-link" ng-href="/portfolio/{{thirdRow[$index]._id}}">
+            <div class="col-sm-12 col-xs-24 third-row">
+              <div class="row-content" style="background-image: url({{ thirdRow[$index].media[0] }})">
+                <div class="title-box">
+                  <h4 class="item-title"><bold>{{ thirdRow[$index].title }}</bold></h4>
+                  <p>{{ thirdRow[$index].categories }}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="portfolio-link" ng-href="/portfolio/{{fourthRow._id}}">
+          <div class="col-xs-24 col-sm-12 fourth-row">
+            <div class="row-content" style="background-image: url({{ fourthRow.media[0] }})">
+              <div class="title-box">
+                <h4 class="item-title"><bold>{{ fourthRow.title }}</bold></h4>
+                <p>{{ fourthRow.categories }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="portfolio-link" ng-href="/portfolio/{{fifthRow._id}}">
+          <div class="col-sm-12 col-xs-24 fourth-row">
+              <div class="row-content" style="background-image: url({{ fifthRow.media[0] }})">
+                <div class="title-box">
+                  <h4 class="item-title"><bold>{{ fifthRow.title }}</bold></h4>
+                  <p>{{ fifthRow.categories }}</p>
+                </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="row">
+        <a class="portfolio-link" ng-href="/portfolio/{{sixthRow._id}}">
+          <div class="col-xs-24 col-sm-8 fifth-row">
+            <div class="row-content" style="background-image: url({{ sixthRow.media[0] }})">
+              <div class="title-box">
+                <h4 class="item-title"><bold>{{ sixthRow.title }}</bold></h4>
+                <p>{{ sixthRow.categories }}</p>
+              </div>
+            </div>
+          </div>
+        </a> 
+
+        <a class="portfolio-link" ng-href="/portfolio/{{seventhRow._id}}">
+          <div class="col-xs-24 col-sm-8 fifth-row">
+            <div class="row-content" style="background-image: url({{ seventhRow.media[0] }})">
+              <div class="title-box">
+                <h4 class="item-title"><bold>{{ seventhRow.title }}</bold></h4>
+                <p>{{ seventhRow.categories }}</p>
+              </div>
+            </div>
+          </div>
+        </a> 
+
+        <a class="portfolio-link" ng-href="/portfolio/{{eightRow._id}}">
+          <div class="col-xs-24 col-sm-8 fifth-row">
+            <div class="row-content" style="background-image: url({{ eightRow.media[0] }})">
+              <div class="title-box">
+                <h4 class="item-title"><bold>{{ eightRow.title }}</bold></h4>
+                <p>{{ eightRow.categories }}</p>
+              </div>
+            </div>
+          </div>
+        </a> 
+      </div>
+
+      <div class="row">
+        <div ng-repeat="item in ninthRow">
+          <a class="portfolio-link" ng-href="/portfolio/{{ninthRow[$index]._id}}">
+            <div class="col-sm-12 col-xs-24 sixth-row">
+              <div style="background-image: url({{ ninthRow[$index].media[0] }})" class="row-content">
+                <div class="title-box">
+                  <h4 class="item-title"><bold>{{ ninthRow[$index].title }}</bold></h4>
+                  <p>{{ ninthRow[$index].categories }}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <a class="portfolio-link" ng-href="/portfolio/{{tenthRow._id}}">
+          <div class="col-xs-24 col-sm-10 seventh-row">
+            <div class="row-content" style="background-image: url({{ tenthRow.media[0] }})">
+              <div class="title-box">
+                <h4 class="item-title"><bold>{{ tenthRow.title }}</bold></h4>
+                <p>{{ tenthRow.categories }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="portfolio-link" ng-href="/portfolio/{{eleventhRow._id}}">
+          <div class="col-xs-24 col-sm-14 seventh-row">
+              <div class="row-content" style="background-image: url({{ eleventhRow.media[0] }})">
+                <div class="title-box">
+                  <h4 class="item-title"><bold>{{ eleventhRow.title }}</bold></h4>
+                  <p>{{ eleventh.categoriesRow }}</p>
+                </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+	</div>

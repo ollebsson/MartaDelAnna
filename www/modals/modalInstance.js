@@ -8,7 +8,6 @@ app.controller('modalInstance', ['$scope', '$uibModalInstance', function($scope,
     // user approves om seleted option
     // so send the selected option back to the myModal directive
     // (modalInstance.result.then(...))
-    console.log("clicked");
     setTimeout(close, 4000);
     // modalInstance.result.then($scope.name, $scope.adress, $scope.zipCode, $scope.city, $scope.phone, $scope.email);
     function close() {

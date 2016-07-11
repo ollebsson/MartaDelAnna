@@ -22,6 +22,18 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
 		templateUrl: "templates/about.html",
 		controller: "aboutCtrl"
 	})
+	.when("/portfolio/interior",{
+		templateUrl: "templates/interior.html",
+		controller: "interior",
+	})
+	.when("/portfolio/scenography",{
+		templateUrl: "templates/scenography.html",
+		controller: "scenography",
+	})
+	.when("/portfolio/product",{
+		templateUrl: "templates/product.html",
+		controller: "product",
+	})
 	.when("/portfolio/:id",{
 		templateUrl: "templates/detailView.html",
 		controller: "detailViewCtrl",

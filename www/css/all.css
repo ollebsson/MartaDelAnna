@@ -7324,9 +7324,25 @@ header {
 }
 .navbar-default .navbar-nav > li > a {
   color: black;
+  padding-bottom: 4px;
+  transition: 0.3s ease-in-out;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: gainsboro;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 4px;
+}
+.navbar-default .navbar-nav > li > a:focus {
+  color: gainsboro;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 4px;
+}
+.navbar-default .navbar-nav > li > a:active {
+  color: gainsboro;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 4px;
 }
 @media (max-width: 767px) {
-  /* CSS goes here */
   #header-content {
     letter-spacing: 0px;
   }
@@ -7340,7 +7356,10 @@ body {
   line-height: 1;
 }
 .tabs {
-  margin-top: 20px;
+  margin-top: 42px;
+}
+.tab-content {
+  margin-top: 40px;
 }
 .arrow {
   margin-bottom: 20px;
@@ -7361,60 +7380,32 @@ body {
 }
 .me h4 {
   text-align: center;
+  margin-bottom: 16px;
+  color: white;
+}
+.me h5 {
+  text-align: center;
   margin-bottom: 10px;
   color: white;
 }
 .me h3 {
+  margin-top: 46px;
   color: white;
 }
 .portrait {
   height: 380px;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-bottom: 39px;
 }
-.modal-header {
-  text-align: center;
+#contact:hover {
+  cursor: pointer;
 }
-.form-control {
-  border-bottom: 1px solid black;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-radius: 0px;
+.resume p {
+  margin-bottom: 47px;
 }
-.form-control:focus {
-  border-bottom: 1px solid black;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  border-radius: 0px;
-  box-shadow: none;
-}
-.btn {
-  background-color: gainsboro;
-  color: black;
-  border-radius: 0px;
-}
-.btn:hover {
-  background-color: black;
-  color: white;
-  border-radius: 0px;
-}
-.contact {
-  text-align: center;
-  font-size: 12px;
-}
-.contact p {
-  color: #777777;
-}
-.contact a {
-  color: #777777;
-}
-.links {
-  margin-top: 40px;
-}
-.error {
-  margin-top: 10px;
+.column {
+  margin-bottom: 42px;
 }
 @media (min-width: 601px) {
   #home-columns {
@@ -7441,6 +7432,10 @@ body {
 }
 .article {
   margin-bottom: 51px;
+}
+.heart {
+  margin: 0 auto;
+  height: 49px;
 }
 .footer {
   height: 150px;
@@ -7502,6 +7497,7 @@ carousel .carousel-caption {
   max-width: 477px;
   min-width: 300px;
   font-family: 'Source Code Pro';
+  text-shadow: none;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -7564,20 +7560,21 @@ carousel .carousel-caption h3 {
   font-size: 13px;
   line-height: 23px;
   margin-top: 40px;
+  height: 400px;
 }
 .item-properties {
   color: #777777;
   line-height: 23px;
-  margin-top: 49px;
+  margin-top: 60px;
   font-size: 13px;
   font-weight: 400;
 }
 .slide-show {
   width: 100%;
-  margin-top: 75px;
 }
 @media (min-width: 1000px) {
   .slide-show-content {
+    margin-bottom: 20px;
     background-size: cover;
     background-repeat: no-repeat;
     height: 600px;
@@ -7586,7 +7583,11 @@ carousel .carousel-caption h3 {
 }
 /*	@media(min-width: 650px) {
 		.slide-show {
+			margin-bottom: 20px;
 			height: 600px;
+		}
+		.slide-show-content {
+			margin-left: 40px;
 		}
 	}*/
 /*	@media(max-width: 800px) {
@@ -7599,9 +7600,11 @@ carousel .carousel-caption h3 {
 	}*/
 @media (max-width: 800px) {
   .slide-show {
+    padding-left: 5px;
     margin-top: 30px;
   }
   .slide-show-content {
+    margin-bottom: 50px;
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -7617,10 +7620,20 @@ carousel .carousel-caption h3 {
   .seventh-row:hover {
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
-    transition: 0.3s ease;
     cursor: pointer;
     text-decoration: underline;
     color: white;
+  }
+  .first-row .title-box,
+  .second-row .title-box,
+  .third-row .title-box,
+  .fourth-row .title-box,
+  .fifth-row .titlebox,
+  .sixth-row .title-box,
+  .seventh-row .title-box {
+    background-color: rgba(0, 0, 0, 0);
+    color: transparent;
+    transition: 0.3s ease-in-out;
   }
   .first-row:hover .title-box,
   .second-row:hover .title-box,
@@ -7630,7 +7643,7 @@ carousel .carousel-caption h3 {
   .sixth-row:hover .title-box,
   .seventh-row:hover .title-box {
     background-color: rgba(0, 0, 0, 0.7);
-    transition: 0.3s ease;
+    color: white;
   }
   .first-row,
   .second-row,
@@ -7641,9 +7654,33 @@ carousel .carousel-caption h3 {
   .seventh-row {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
-    padding: 10px;
     color: transparent;
+    transition: 0.3s ease-in-out;
   }
+  .tabs {
+    padding: 5px;
+  }
+}
+/* End of media query */
+@media (max-width: 900px) {
+  .first-row .title-box,
+  .second-row .title-box,
+  .third-row .title-box,
+  .fourth-row .title-box,
+  .fifth-row .titlebox,
+  .sixth-row .title-box,
+  .seventh-row .title-box {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+.row-content {
+  height: 100%;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  position: relative;
+  color: white;
+  text-align: center;
 }
 .first-row,
 .second-row,
@@ -7652,20 +7689,11 @@ carousel .carousel-caption h3 {
 .fifth-row,
 .sixth-row,
 .seventh-row {
-  /*-webkit-filter: grayscale(100%); */
-  /*filter: grayscale(100%);*/
+  text-decoration: underline;
   padding: 10px;
-  /*color: transparent;*/
-}
-.row-content {
-  height: 100%;
-  background-size: cover;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  position: relative;
 }
 .first-row {
-  height: 275px;
+  height: 270px;
 }
 .second-row {
   height: 540px;
@@ -7695,5 +7723,75 @@ carousel .carousel-caption h3 {
   position: absolute;
   bottom: 20px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
+}
+.btn {
+  width: 117px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.btn:hover {
+  color: white;
+  background-color: black;
+  border-radius: 0px;
+  transition: 0.4s;
+}
+.btn:focus {
+  color: white;
+  background-color: black;
+  border-image: 0px;
+}
+button#active {
+  background-color: black;
+  border-radius: 0px;
+  color: white;
+}
+#button-right {
+  margin-left: 10px;
+}
+#pills {
+  text-align: center;
+}
+.modal-header {
+  text-align: center;
+}
+.modal-content {
+  border-radius: 0px;
+}
+.form-control {
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0px;
+}
+.form-control:focus {
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.btn {
+  background-color: gainsboro;
+  color: black;
+  border-radius: 0px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+  border-radius: 0px;
+}
+.contact {
+  text-align: center;
+  font-size: 12px;
+}
+.contact p {
+  color: #777777;
+}
+.contact a {
+  color: #777777;
+}
+.links {
+  margin-top: 40px;
 }

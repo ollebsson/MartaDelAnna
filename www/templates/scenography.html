@@ -1,0 +1,30 @@
+<carousel></carousel>
+
+<div class="container pills">
+
+  <div class="col-xs-24 tabs">
+    <h4 id="pills">
+
+        <a ng-href="/portfolio"><button type="button" class="btn">ALL</button></a>
+        <a ng-href="/portfolio/interior"><button type="button" class="btn">INTERIOR</button></a>
+        <button type="button" class="btn" id="active">SCENOGRAPHY</button>
+        <a ng-href="/portfolio/product"><button type="button" class="btn">PRODUCTS</button></a>
+    </h4>
+  </div>
+</div>
+
+<div class="row list-view">
+    <div ng-repeat="item in scenography">
+      <a class="portfolio-link" ng-href="/portfolio/{{scenography[$index]._id}}">
+        <div class="col-xs-24 col-sm-12 fourth-row">
+          <div style="background-image: url({{ scenography[$index].media[0] }})" class="row-content">
+            <div class="title-box">
+              <h4 class="item-title"><bold>{{ scenography[$index].title }}</bold></h4>
+              <p>{{ scenography[$index].categories }}</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

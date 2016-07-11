@@ -1,11 +1,5 @@
 <carousel></carousel>
 
-<style type="text/css">
-  form.tab-form-demo .tab-pane {
-    margin: 20px 20px;
-  }
-</style>
-
 <div ng-controller="tabs">
   <uib-tabset type="pills" class="tabs">
 
@@ -43,7 +37,7 @@
 
 						<h4>DESIGN WITH LOVE</h4>
 
-						<h4><img class="icon" ng-src="/img/icons/heart.jpg"/></h4>
+						<h4><img class="heart" ng-src="/img/icons/heart.jpg"/></h4>
 
 						<p>Our main focus is to create design that makes a beneficial difference for humans, animals and the Planet. We believe that interior and product design with minimal environmental and social impact doesn’t mean that the design or function is secondary. These frames take our design to the next level.</p>
 
@@ -104,8 +98,8 @@
 		<h3>THIS IS ME</h3>
 						-
 			<div class="row">
-				<div class="col-md-8">
-					<article>
+				<div class="col-md-8 column">
+					<article class="resume">
 						<h4>MY SKILLS &amp; TOOLS</h4>
 						<p>My tools for presenting my project such as plans, 3D models, sketches, views and more.</p>
 
@@ -121,14 +115,14 @@
 
 				</div>
 
-				<div class="col-md-8">
+				<div class="col-md-8 column">
 					<h4>EMPLOYMENTS</h4>
 					<p>2015-2016</p>
 					<p>Interior architect at Sweco architects</p>
 					<p>2013-2014</p>
-					<p>Interior architect at Horsisont architects</p>
+					<p class="column">Interior architect at Horsisont architects</p>
 
-					<h4>EDUCATION</h4>
+					<h4 class="column">EDUCATION</h4>
 
 					<p>2010-2013</p>
 					<p>HDK (School of Design and Crafts)</p>
@@ -139,7 +133,7 @@
 					<p>Artistic education</p>
 				</div>
 
-				<div class="col-md-8 portrait" style="{{ portrait }}">
+				<div class="col-md-6 col-md-offset-2 col-xs-offset-4 col-sm-offset-8 portrait" style="{{ portrait }}">
 
 				</div>
 			</div>
