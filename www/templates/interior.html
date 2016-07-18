@@ -2,7 +2,7 @@
 
 <div class="container">
 
-	<div class="col-xs-24 tabs">
+	<div class="col-xs-24 tabs" name="tabs">
 		<h4 id="pills"><a ng-href="/portfolio"><button type="button" class="btn">ALL</button></a>
 		<button type="button" class="btn" id="active">INTERIOR</button>
 		<a ng-href="/portfolio/scenography"><button type="button" class="btn">SCENOGRAPHY</button></a>
@@ -18,7 +18,7 @@
 	<div class="row">
 	  <div ng-repeat="item in interior">
 	    <a class="portfolio-link" ng-href="/portfolio/{{interior[$index]._id}}">
-	      <div class="col-md-6 col-xs-12 first-row">
+	      <div class="col-sm-6 col-xs-24 first-row" id="no-offset">
 	        <div style="background-image: url({{ interior[$index].media[0] }})" class="row-content">
 	          <div class="title-box">
 	            <h4 class="item-title"><bold>{{ interior[$index].title }}</bold></h4>

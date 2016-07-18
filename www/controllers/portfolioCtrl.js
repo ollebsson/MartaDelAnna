@@ -1,8 +1,13 @@
-app.controller('portfolioCtrl',  ['$scope', 'Item', function($scope, Item){
+app.controller('portfolioCtrl',  ['$scope', 'Item', '$location', '$anchorScroll', function($scope, Item, $location, $anchorScroll){
 
 	$scope.backgrounds = { image: ["img/backgrounds/portfolio.jpg"] };
 	$scope.carouselCaption = { title: "PORTFOLIO", text1: "ALL CATEGORIES"};
 
+	$scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+      console.log($location.hash(id));
+   	}
 	function loadItems(data) {
         var items = data || Item.get(function(data) {
           console.log(data);

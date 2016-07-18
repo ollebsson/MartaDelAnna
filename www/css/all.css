@@ -7436,6 +7436,7 @@ body {
 .heart {
   margin: 0 auto;
   height: 49px;
+  margin-bottom: 9px;
 }
 .footer {
   height: 150px;
@@ -7560,7 +7561,6 @@ carousel .carousel-caption h3 {
   font-size: 13px;
   line-height: 23px;
   margin-top: 40px;
-  height: 400px;
 }
 .item-properties {
   color: #777777;
@@ -7571,14 +7571,21 @@ carousel .carousel-caption h3 {
 }
 .slide-show {
   width: 100%;
+  margin-bottom: 40px;
+  height: 500px;
+  text-align: center;
+}
+.slide-show h1 {
+  text-align: center;
 }
 @media (min-width: 1000px) {
   .slide-show-content {
-    margin-bottom: 20px;
-    background-size: cover;
+    margin-bottom: 50px;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 600px;
+    min-height: 400px;
     padding: 5px;
+    margin-top: 40px;
   }
 }
 /*	@media(min-width: 650px) {
@@ -7600,7 +7607,6 @@ carousel .carousel-caption h3 {
 	}*/
 @media (max-width: 800px) {
   .slide-show {
-    padding-left: 5px;
     margin-top: 30px;
   }
   .slide-show-content {
@@ -7608,6 +7614,7 @@ carousel .carousel-caption h3 {
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 50px;
   }
 }
 @media (min-width: 1000px) {
@@ -7656,9 +7663,45 @@ carousel .carousel-caption h3 {
     filter: grayscale(100%);
     color: transparent;
     transition: 0.3s ease-in-out;
+    padding: 10px;
   }
   .tabs {
     padding: 5px;
+  }
+  .first-row {
+    height: 270px;
+  }
+  .second-row {
+    height: 490px;
+  }
+  .third-row {
+    height: 316px;
+  }
+  .fourth-row {
+    height: 532px;
+  }
+  .fifth-row {
+    height: 383px;
+  }
+  .sixth-row {
+    height: 539px;
+  }
+  .seventh-row {
+    height: 270px;
+  }
+  .row-content {
+    height: 100%;
+    background-size: cover;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    position: relative;
+    color: white;
+    text-align: center;
+    background-position-x: -78px;
+    /*background-repeat: no-repeat;*/
+  }
+  #no-offset {
+    background-position-x: 0px;
   }
 }
 /* End of media query */
@@ -7667,51 +7710,58 @@ carousel .carousel-caption h3 {
   .second-row .title-box,
   .third-row .title-box,
   .fourth-row .title-box,
-  .fifth-row .titlebox,
+  .fifth-row .title-box,
   .sixth-row .title-box,
   .seventh-row .title-box {
     background-color: rgba(0, 0, 0, 0.7);
+    height: 84px;
+    padding-top: 5px;
   }
-}
-.row-content {
-  height: 100%;
-  background-size: cover;
-  margin-bottom: 10px;
-  padding-top: 20px;
-  position: relative;
-  color: white;
-  text-align: center;
-}
-.first-row,
-.second-row,
-.third-row,
-.fourth-row,
-.fifth-row,
-.sixth-row,
-.seventh-row {
-  text-decoration: underline;
-  padding: 10px;
-}
-.first-row {
-  height: 270px;
-}
-.second-row {
-  height: 540px;
-}
-.third-row {
-  height: 316px;
-}
-.fourth-row {
-  height: 527px;
-}
-.fifth-row {
-  height: 383px;
-}
-.sixth-row {
-  height: 539px;
-}
-.seventh-row {
-  height: 270px;
+  .row-content {
+    height: 100%;
+    background-size: cover;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    position: relative;
+    color: white;
+    text-align: center;
+    background-position-x: -76px;
+    background-repeat: no-repeat;
+  }
+  #no-offset {
+    background-position-x: 0px;
+  }
+  .first-row,
+  .second-row,
+  .third-row,
+  .fourth-row,
+  .fifth-row,
+  .sixth-row,
+  .seventh-row {
+    text-decoration: underline;
+    padding: 10px;
+  }
+  .first-row {
+    height: 310px;
+  }
+  .second-row {
+    height: 316px;
+  }
+  .third-row {
+    height: 316px;
+  }
+  .fourth-row {
+    height: 410px;
+  }
+  .fifth-row {
+    height: 310px;
+  }
+  .sixth-row {
+    height: 439px;
+  }
+  .seventh-row {
+    height: 270px;
+  }
 }
 .tab-content {
   text-align: center;

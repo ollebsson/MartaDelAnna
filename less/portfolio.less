@@ -3,10 +3,10 @@
 
 	.first-row:hover, .second-row:hover, .third-row:hover, .fourth-row:hover, .fifth-row:hover, .sixth-row:hover, .seventh-row:hover {
 		-webkit-filter: grayscale(0%); 
-	  filter: grayscale(0%);
-	  cursor: pointer;
-	text-decoration: underline;
-	color: white;
+	  	filter: grayscale(0%);
+	  	cursor: pointer;
+		text-decoration: underline;
+		color: white;
 	}
 	.first-row .title-box, .second-row .title-box, .third-row .title-box, .fourth-row .title-box, .fifth-row .titlebox, .sixth-row .title-box, .seventh-row .title-box {
 		background-color: rgba(0, 0, 0, 0);
@@ -23,39 +23,17 @@
 	  filter: grayscale(100%);
 	  color: transparent;
 		transition: 0.3s ease-in-out;
+		padding: 10px;
 
 	}
 	.tabs {
 		padding: 5px;
 	}
-}	
-
-/* End of media query */
-@media(max-width: 900px ) {
-
-	.first-row .title-box, .second-row .title-box, .third-row .title-box, .fourth-row .title-box, .fifth-row .titlebox, .sixth-row .title-box, .seventh-row .title-box {
-		background-color: rgba(0,0,0,0.7);
-	}
-}
-	.row-content {
-		height: 100%;
-		background-size: cover;
-		margin-bottom: 10px;
-		padding-top: 20px;
-		position: relative;
-		color: white;
-		text-align: center;
-	}	
-
-	.first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row, .seventh-row, {
-		text-decoration: underline;
-		padding: 10px;
-	}
 	.first-row {
 		height: 270px;
 	}
 	.second-row {
-		height: 540px;
+		height: 490px;
 
 	}
 	.third-row {
@@ -63,7 +41,7 @@
 	}
 
 	.fourth-row {
-		height: 527px;
+		height: 532px;
 	}
 	.fifth-row {
 		height: 383px;
@@ -74,7 +52,78 @@
 	.seventh-row {
 		height: 270px;
 
-} 
+	}
+	.row-content {
+		height: 100%;
+		background-size: cover;
+		margin-bottom: 10px;
+		padding-top: 20px;
+		position: relative;
+		color: white;
+		text-align: center;
+		background-position-x: -78px;
+		/*background-repeat: no-repeat;*/
+	}
+	#no-offset {
+		background-position-x: 0px;
+
+	}
+}	
+
+/* End of media query */
+@media(max-width: 900px ) {
+
+	.first-row .title-box, .second-row .title-box, .third-row .title-box, .fourth-row .title-box, .fifth-row .title-box, .sixth-row .title-box, .seventh-row .title-box {
+		background-color: rgba(0,0,0,0.7);
+		height: 84px;
+		padding-top: 5px;
+	}
+
+	.row-content {
+		height: 100%;
+		background-size: cover;
+		margin-bottom: 10px;
+		padding-top: 20px;
+		position: relative;
+		color: white;
+		text-align: center;
+		background-position-x: -76px;
+		background-repeat: no-repeat;
+	}
+	#no-offset {
+		background-position-x: 0px;
+
+	}
+
+	.first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row, .seventh-row, {
+		text-decoration: underline;
+		padding: 10px;
+	}
+	.first-row {
+		height: 310px;
+	}
+	.second-row {
+		height: 316px;
+
+	}
+	.third-row {
+		height: 316px;
+	}
+
+	.fourth-row {
+		height: 410px;
+	}
+	.fifth-row {
+		height: 310px;
+	}
+	.sixth-row {
+		height: 439px;
+	}
+	.seventh-row {
+		height: 270px;
+
+	} 
+}	
 
 
 

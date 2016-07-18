@@ -2,10 +2,10 @@
 
 <div class="container">
 
-	<div class="col-xs-24 tabs">
+	<div class="col-xs-24 tabs" id="tabs">
 		<h4 id="pills"><button type="button" id="active" class="btn">ALL</button>
 		<a ng-href="/portfolio/interior"><button type="button" class="btn">INTERIOR</button></a>
-		<a ng-href="/portfolio/scenography"><button type="button" class="btn">SCENOGRAPHY</button></a>
+		<a ng-href="/portfolio/scenography" ng-click="scrollTo('tabs')"><button type="button" class="btn">SCENOGRAPHY</button></a>
 		<a ng-href="/portfolio/product"><button type="button" class="btn">PRODUCTS</button></a></h4>
 	</div>
 
@@ -47,7 +47,7 @@
         <div ng-repeat="item in thirdRow">
           <a class="portfolio-link" ng-href="/portfolio/{{thirdRow[$index]._id}}">
             <div class="col-sm-12 col-xs-24 third-row">
-              <div class="row-content" style="background-image: url({{ thirdRow[$index].media[0] }})">
+              <div class="row-content"  id="no-offset" style="background-image: url({{ thirdRow[$index].media[0] }})">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ thirdRow[$index].title }}</bold></h4>
                   <p>{{ thirdRow[$index].categories }}</p>
@@ -60,8 +60,8 @@
 
       <div class="row">
         <a class="portfolio-link" ng-href="/portfolio/{{fourthRow._id}}">
-          <div class="col-xs-24 col-sm-12 fourth-row">
-            <div class="row-content" style="background-image: url({{ fourthRow.media[0] }})">
+          <div class="col-xs-24 col-sm-8 fourth-row">
+            <div class="row-content" id="no-offset" style="background-image: url({{ fourthRow.media[0] }})">
               <div class="title-box">
                 <h4 class="item-title"><bold>{{ fourthRow.title }}</bold></h4>
                 <p>{{ fourthRow.categories }}</p>
@@ -71,7 +71,7 @@
         </a>
 
         <a class="portfolio-link" ng-href="/portfolio/{{fifthRow._id}}">
-          <div class="col-sm-12 col-xs-24 fourth-row">
+          <div class="col-sm-16 col-xs-24 fourth-row">
               <div class="row-content" style="background-image: url({{ fifthRow.media[0] }})">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ fifthRow.title }}</bold></h4>
@@ -85,7 +85,7 @@
       <div class="row">
         <a class="portfolio-link" ng-href="/portfolio/{{sixthRow._id}}">
           <div class="col-xs-24 col-sm-8 fifth-row">
-            <div class="row-content" style="background-image: url({{ sixthRow.media[0] }})">
+            <div class="row-content"  id="no-offset" style="background-image: url({{ sixthRow.media[0] }})">
               <div class="title-box">
                 <h4 class="item-title"><bold>{{ sixthRow.title }}</bold></h4>
                 <p>{{ sixthRow.categories }}</p>
@@ -95,7 +95,7 @@
         </a> 
 
         <a class="portfolio-link" ng-href="/portfolio/{{seventhRow._id}}">
-          <div class="col-xs-24 col-sm-8 fifth-row">
+          <div class="col-xs-24 col-sm-10 fifth-row">
             <div class="row-content" style="background-image: url({{ seventhRow.media[0] }})">
               <div class="title-box">
                 <h4 class="item-title"><bold>{{ seventhRow.title }}</bold></h4>
@@ -106,7 +106,7 @@
         </a> 
 
         <a class="portfolio-link" ng-href="/portfolio/{{eightRow._id}}">
-          <div class="col-xs-24 col-sm-8 fifth-row">
+          <div class="col-xs-24 col-sm-6 fifth-row">
             <div class="row-content" style="background-image: url({{ eightRow.media[0] }})">
               <div class="title-box">
                 <h4 class="item-title"><bold>{{ eightRow.title }}</bold></h4>
@@ -135,7 +135,7 @@
       <div class="row">
         <a class="portfolio-link" ng-href="/portfolio/{{tenthRow._id}}">
           <div class="col-xs-24 col-sm-10 seventh-row">
-            <div class="row-content" style="background-image: url({{ tenthRow.media[0] }})">
+            <div class="row-content" id="no-offset" style="background-image: url({{ tenthRow.media[0] }})">
               <div class="title-box">
                 <h4 class="item-title"><bold>{{ tenthRow.title }}</bold></h4>
                 <p>{{ tenthRow.categories }}</p>
@@ -146,10 +146,10 @@
 
         <a class="portfolio-link" ng-href="/portfolio/{{eleventhRow._id}}">
           <div class="col-xs-24 col-sm-14 seventh-row">
-              <div class="row-content" style="background-image: url({{ eleventhRow.media[0] }})">
+              <div class="row-content" id="no-offset" style="background-image: url({{ eleventhRow.media[0] }})">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ eleventhRow.title }}</bold></h4>
-                  <p>{{ eleventh.categoriesRow }}</p>
+                  <p>{{ eleventhRow.categories }}</p>
                 </div>
             </div>
           </div>

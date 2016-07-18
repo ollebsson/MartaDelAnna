@@ -7,7 +7,7 @@
         <div ng-repeat="item in firstRow">
           <a class="portfolio-link" ng-href="/portfolio/{{firstRow[$index]._id}}">
             <div class="col-md-6 col-xs-24 first-row">
-              <div class="row-content" style="background-image: url({{ firstRow[$index].media[0] }}">
+              <div class="row-content" style="background-image: url({{ firstRow[$index].media[0] }})">
                 <div class="title-box">
     		  				<h4 class="item-title"><bold>{{ firstRow[$index].title }}</bold></h4>
     		  				<p>{{ firstRow[$index].categories }}</p>
@@ -22,7 +22,7 @@
         <div ng-repeat="item in secondRow">
           <a class="portfolio-link" ng-href="/portfolio/{{secondRow[$index]._id}}">
             <div class="col-md-12 col-xs-24 second-row">
-              <div class="row-content" style="background-image: url({{ secondRow[$index].media[0] }}">
+              <div class="row-content" style="background-image: url({{ secondRow[$index].media[0] }})">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ secondRow[$index].title }}</bold></h4>
                   <p>{{ secondRow[$index].categories }}</p>
@@ -37,7 +37,7 @@
         <div ng-repeat="item in thirdRow">
           <a class="portfolio-link" ng-href="/portfolio/{{thirdRow[$index]._id}}">
             <div class="col-md-12 col-xs-24 third-row">
-              <div class="row-content" style="background-image: url({{ thirdRow[$index].media[0] }}">
+              <div class="row-content" style="background-image: url({{ thirdRow[$index].media[0] }})">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ thirdRow[$index].title }}</bold></h4>
                   <p>{{ thirdRow[$index].categories }}</p>
@@ -157,7 +157,7 @@
         <div ng-repeat="item in interior">
           <a class="portfolio-link" ng-href="/portfolio/{{interior[$index]._id}}">
             <div class="col-md-6 col-xs-12 first-row">
-              <div style="background-image: url({{ interior[$index].media[0] }}" class="row-content">
+              <div style="background-image: url({{ interior[$index].media[0] }})" class="row-content">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ interior[$index].title }}</bold></h4>
                   <p>{{ interior[$index].categories }}</p>
@@ -178,7 +178,7 @@
         <div ng-repeat="item in scenography">
           <a class="portfolio-link" ng-href="/portfolio/{{scenography[$index]._id}}">
             <div class="col-xs-12 second-row">
-              <div style="background-image: url({{ scenography[$index].media[0] }}" class="row-content">
+              <div style="background-image: url({{ scenography[$index].media[0] }})" class="row-content">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ scenography[$index].title }}</bold></h4>
                   <p>{{ scenography[$index].categories }}</p>
@@ -199,7 +199,7 @@
         <div ng-repeat="item in product">
           <a class="portfolio-link" ng-href="/portfolio/{{product[$index]._id}}">
             <div class="col-xs-12 third-row">
-              <div style="background-image: url({{ product[$index].media[0] }}" class="row-content">
+              <div style="background-image: url({{ product[$index].media[0] }})" class="row-content">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ product[$index].title }}</bold></h4>
                   <p>{{ product[$index].categories }}</p>

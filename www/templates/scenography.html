@@ -2,7 +2,7 @@
 
 <div class="container pills">
 
-  <div class="col-xs-24 tabs">
+  <div class="col-xs-24 tabs" name="tabs">
     <h4 id="pills">
 
         <a ng-href="/portfolio"><button type="button" class="btn">ALL</button></a>
@@ -12,19 +12,28 @@
     </h4>
   </div>
 </div>
-
-<div class="row list-view">
-    <div ng-repeat="item in scenography">
-      <a class="portfolio-link" ng-href="/portfolio/{{scenography[$index]._id}}">
-        <div class="col-xs-24 col-sm-12 fourth-row">
-          <div style="background-image: url({{ scenography[$index].media[0] }})" class="row-content">
+<div class="container">
+  <div class="row list-view">
+      <a class="portfolio-link" ng-href="/portfolio/{{scenography[0]._id}}">
+        <div class="col-xs-24 col-sm-7 third-row">
+          <div style="background-image: url({{ scenography[0].media[0] }})" class="row-content">
             <div class="title-box">
-              <h4 class="item-title"><bold>{{ scenography[$index].title }}</bold></h4>
-              <p>{{ scenography[$index].categories }}</p>
+              <h4 class="item-title"><bold>{{ scenography[0].title }}</bold></h4>
+              <p>{{ scenography[0].categories }}</p>
             </div>
           </div>
         </div>
       </a>
-    </div>
+
+      <a class="portfolio-link" ng-href="/portfolio/{{scenography[1]._id}}">
+        <div class="col-xs-24 col-sm-12 third-row">
+          <div style="background-image: url({{ scenography[1].media[0] }})" class="row-content" id="no-offset">
+            <div class="title-box">
+              <h4 class="item-title"><bold>{{ scenography[1].title }}</bold></h4>
+              <p>{{ scenography[1].categories }}</p>
+            </div>
+          </div>
+        </div>
+      </a>
   </div>
 </div>
