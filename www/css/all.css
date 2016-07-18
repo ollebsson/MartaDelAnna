@@ -7511,8 +7511,12 @@ carousel .carousel-caption {
 carousel .carousel-caption h3 {
   margin-bottom: 24px;
 }
+.pills {
+  margin-top: 50px;
+}
 .pills ul li {
   background-color: white;
+  margin-top: 10px;
 }
 .nav-pills > li {
   width: 132px;
@@ -7528,6 +7532,7 @@ carousel .carousel-caption h3 {
 }
 .nav-pills > li > a {
   color: black;
+  background-color: gainsboro;
   border-radius: 0px;
   transition: 0.3s ease-in-out;
 }
