@@ -6,7 +6,6 @@ app.directive('pills', [function() {
 
       function loadItems(data) {
         var items = data || Item.get(function(data) {
-          console.log(data);
         // First row 
 
         var first = [];
@@ -47,8 +46,14 @@ app.directive('pills', [function() {
 
         $scope.tenthRow = items[15];
         $scope.eleventhRow = items[16];
-        });
+        
+        var rest = [];
+        for (var i = 17; i < items.length; ++i) {
+          rest.push(items[i]);
+        }
+        $scope.restRow = rest;
 
+        });
       }
 
       function loadInterior(data) {

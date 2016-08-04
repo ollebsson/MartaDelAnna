@@ -8,8 +8,8 @@
 			<h4>{{ item.title }}</h4>
 
 			<p> {{ item.paragraph1 }} </p>
-			<p> {{ item.paragraph2 }} </p>
-			<p> {{ item.paragraph3 }} </p>
+			<p> {{ item.paragraph2 }} <a ng-href="{{item.url[0]}}" target="_blank">{{ item.urlName }}</a> </p>
+			<p> {{ item.paragraph3 }} <a ng-href="{{item.url[1]}}" target="_blank">{{ item.urlName }}</a></p>
 			<p> {{ item.paragraph4 }} </p>
 			<p> {{ item.paragraph5 }} </p>
 			<p> {{ item.paragraph6 }} </p>
@@ -22,7 +22,19 @@
 			<p>CLIENT: {{ item.client }}</p>
 		</div>
 		<div class="slide-show">
-			<div class="slide-show-content col-xs-20 col-sm-10 col-sm-offset-1 col-md-offset-4 col-xs-offset-2" style="{{ slideShow }}"></div>
+			<div class="slide-show-content col-xs-20 col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-4 col-xs-offset-2" style="{{ slideShow }}">
+				<div ng-controller="carouselCtrl">
+				  <div style="height: 305px">
+				    <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+				      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+				        <img ng-src="{{slide.image}}" style="margin:auto;">
+				        <div class="carousel-caption">
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
 		</div>
 
 	</div>

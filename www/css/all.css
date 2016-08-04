@@ -7566,6 +7566,7 @@ carousel .carousel-caption h3 {
   font-size: 13px;
   line-height: 23px;
   margin-top: 40px;
+  min-height: 300px;
 }
 .item-properties {
   color: #777777;
@@ -7590,18 +7591,25 @@ carousel .carousel-caption h3 {
     background-repeat: no-repeat;
     min-height: 400px;
     padding: 5px;
-    margin-top: 40px;
+    margin-top: 60px;
+  }
+  item-description {
+    min-height: 400px;
+  }
+  .slide-show {
+    height: 850px;
   }
 }
-/*	@media(min-width: 650px) {
-		.slide-show {
-			margin-bottom: 20px;
-			height: 600px;
-		}
-		.slide-show-content {
-			margin-left: 40px;
-		}
-	}*/
+@media (max-width: 990px) {
+  .slide-show {
+    margin-bottom: 20px;
+    height: 670px;
+  }
+  .slide-show-content {
+    margin-left: 40px;
+    margin-top: 60px;
+  }
+}
 /*	@media(max-width: 800px) {
 		.slide-show {
 			height: 300px;
@@ -7610,9 +7618,10 @@ carousel .carousel-caption h3 {
 
 		}
 	}*/
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .slide-show {
     margin-top: 30px;
+    height: 300px;
   }
   .slide-show-content {
     margin-bottom: 50px;
@@ -7622,7 +7631,7 @@ carousel .carousel-caption h3 {
     margin-top: 50px;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1300px) {
   .first-row:hover,
   .second-row:hover,
   .third-row:hover,
@@ -7710,7 +7719,7 @@ carousel .carousel-caption h3 {
   }
 }
 /* End of media query */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .first-row .title-box,
   .second-row .title-box,
   .third-row .title-box,
