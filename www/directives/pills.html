@@ -151,7 +151,7 @@
         <div ng-repeat="item in restRow">
           <a class="portfolio-link" ng-href="/portfolio/{{restRow[$index]._id}}">
             <div class="col-sm-8 col-xs-24 first-row">
-              <div class="row-content" style="background-image: url({{ restRow[$index].media[0] }})">
+              <div class="row-content" id="no-offset" style="background-image: url({{ restRow[$index].media[0] }})">
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ restRow[$index].title }}</bold></h4>
                   <p>{{ restRow[$index].categories }}</p>

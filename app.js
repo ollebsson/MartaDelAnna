@@ -5,7 +5,11 @@ require("./gulpfile");
 // (and thus Express and mongoose)
 var app = require("mongresto")({
   dbName: "marta",
-  staticFolder: './www'
+  staticFolder: './www',
+  permissionToAsk: function(modelName, method, query, req){
+  	return (modelName == "customer" && (method == "GET" && method == "POST")) || 
+  			method == "GET";
+  }
 });
  
 // app is a standard Express app that
