@@ -1,16 +1,9 @@
-app.directive('pills', [ function() {
-
-
-  return {
-    templateUrl: '/directives/pills.html',
-    controller: ['$scope', '$route', 'Item',  function($scope, $route, Item) {
-
-      $scope.carouselCaption = { title: "PORTFOLIO", text1: 'ALL CATEGORIES' };
 
       // $scope.backgrounds = { image: ["img/backgrounds/portfolio.jpg"] };
       // $scope.carouselCaption = { title: "PORTFOLIO", text1: 'ALL CATEGORIES' };
       // console.log($scope.heading);
-
+     
+      // $('.nav-pills').css('height', $scope.heading );
       $scope.setTab = function(category) {
         $scope.carouselCaption = { title: "PORTFOLIO", text1: category };
       }
@@ -89,7 +82,4 @@ app.directive('pills', [ function() {
       loadInterior();
       loadScenography();
       loadProduct();
-
-    }]
-  };
 }]);

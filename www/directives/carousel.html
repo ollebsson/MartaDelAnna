@@ -1,17 +1,19 @@
-<div>
-	<uib-carousel active="active" interval="myInterval" no-pause="true">
-		<uib-slide ng-repeat="slide in slides" index="slide.id">
-		  <div ng-style="slide.imageStyle" class="img-responsive carouselSlide">
-		  </div>
+<uib-carousel active="active" interval="myInterval" no-pause="true">
+	<uib-slide ng-repeat="slide in slides" index="slide.id">
+	  <div ng-style="slide.imageStyle" class="img-responsive carouselSlide">
+	  </div>
+	  <!-- <div class="container-fluid"> -->
+			<div class="carousel-caption">
 
-				  <div class="carousel-caption">
-						<h3>{{ text.title }}</h3>
-						<p>{{ text.text1 }} <br> {{ text.text2 }}</p>
-		      </div>
-
-		</uib-slide>
-	</uib-carousel>
-	<div class="preloader">
-		<div ng-repeat="slide in slides" ng-style="slide.imageStyle"></div>
-	</div>
+				<div class="caption-content">
+					<h3>{{ text.title }}</h3>
+					<p>{{ text.text1 }} {{ text.text2 }}
+					{{ text.categories}}</p>
+				</div>
+	      	<!-- </div> -->
+	  </div>
+	</uib-slide>
+</uib-carousel>
+<div class="preloader">
+	<div ng-repeat="slide in slides" ng-style="slide.imageStyle"></div>
 </div>

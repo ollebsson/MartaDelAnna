@@ -33,6 +33,8 @@
 	<script src="controllers/collapse.js"></script>
 	<script src="controllers/form.js"></script>
 	<script src="controllers/carouselCtrl.js"></script>
+	<script src="controllers/contactCtrl.js"></script>
+	<!-- <script src="controllers/pills.js"></script> -->
 
 	<!-- Directives -->
 	<script src="/directives/carousel.js"></script>
@@ -54,7 +56,7 @@
   <body>
 
 			<navbar>
-				<nav class="navbar navbar-default" ng-controller="navbarController">
+				<nav class="navbar navbar-default" id="ui" ng-controller="navbarController">
 					<div class="container" id="header-content">
 						<div class="navbar-header">
 							<button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
@@ -62,19 +64,19 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							</button>
-							<a class="navbar-brand" ng-href="/" class="brand"><h3 id="logo">MARTA DELL'ANNA</h3></a>
+							<a class="navbar-brand" ng-href="/" ng-click="clickCollapse()" class="brand"><h3 id="logo">MARTA DELL'ANNA</h3></a>
 						</div>
 
 						<div class="navbar-collapse collapse" ng-class="isCollapsed ? '' : 'in'">
 							<ul class="nav navbar-nav navbar-right">
 								<li><a ng-href="/portfolio" ng-click="clickCollapse()">PORTFOLIO</a></li>
 								<li><a ng-href="/about" ng-click="clickCollapse()">ABOUT</a></li>
-								<li><a ng-click="openModal()" id="contact"><modal></modal>CONTACT</a></li>
+								<li><a ng-href="/contact" ng-click="clickCollapse()" id="contact">CONTACT</a></li>
 							</ul>
 						</div>
 					</div>
 				</nav>
-			</header>
+			</navbar>
 
 			<div>
 				<ng-view></ng-view>
@@ -86,11 +88,8 @@
     			<div class=".col-xs-12 text-center">
     				<ul class="list-inline">
     					<li><a ng-href="http://facebook.com" target="_blank">FACEBOOK</a></li>
-    					<li><a ng-href="http://www.twitter.com" target="_blank">TWITTER</a></li>
     					<li><a ng-href="http://www.instagram.com" target="_blank">INSTAGRAM</a></li>
-    					<li><a ng-href="http://www.behance.net" target="_blank">BEHANCE</a></li>
     				</ul>
-          		<p class="copyright">© 2016 Copyright PURE - Created by MuseFrame</p>
     			</div>
     		</div>
     	</div>

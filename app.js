@@ -7,7 +7,7 @@ var app = require("mongresto")({
   dbName: "marta",
   staticFolder: './www',
   permissionToAsk: function(modelName, method, query, req){
-  	return (modelName == "customer" && (method == "GET" && method == "POST")) || 
+  	return (modelName == "Customer" && (method == "GET") || modelName == "Customer" && method == "POST") ||
   			method == "GET";
   }
 });
@@ -17,6 +17,6 @@ var app = require("mongresto")({
 // app.use( require("cookie-parser")() );
  
 // Start up the Express app 
-var port = 3000;
+var port = 8080;
 app.listen(port);
 console.log('Express server listening on port',port);

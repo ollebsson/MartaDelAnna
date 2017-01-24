@@ -1,7 +1,8 @@
 <uib-tabset type="pills" class="pills">
 
-  <uib-tab heading="ALL">
-  	
+
+  <uib-tab heading="ALL" ng-click="setTab('ALL CATEGORIES')" style="height:{{ heading }};">
+    
     <div class="container list-view">
 
       <div class="row">
@@ -164,12 +165,12 @@
 
     </div>
 
-  		
+      
   </uib-tab>
 
-  <uib-tab heading="INTERIOR">
+  <uib-tab heading="INTERIOR" ng-click="setTab('INTERIOR')" style="height:{{ heading }};">
 
-  	<div class="main">
+    <div>
 
       <div class="container list-view">
 
@@ -193,7 +194,7 @@
 
   </uib-tab>
 
-  <uib-tab heading="SCENOGRAPHY">
+  <uib-tab heading="SCENOGRAPHY" ng-click="setTab('SCENOGRAPHY')" style="height:{{ heading }};">
     <div class="container">
       <div class="row list-view">
           <a class="portfolio-link" ng-href="/portfolio/{{scenography[0]._id}}">
@@ -221,9 +222,9 @@
     </div>
   </uib-tab>
 
-  <uib-tab heading="PRODUCTS">
+  <uib-tab heading="PRODUCTS" ng-click="setTab('PRODUCTS')" style="height:{{ heading }};">
 
-  	<div class="container list-view">
+    <div class="container list-view">
 
           <div class="row">
             <div ng-repeat="item in product">

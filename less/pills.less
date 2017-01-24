@@ -1,9 +1,26 @@
-.pills {
-	margin-top: 50px;
+/*.pills {
+	position: relative;
+}*/
+.nav-pills {
+	color: black;
+	position: relative;
+	/*top: 50%;*/
+	/*left: 50%;*/
+	/*transform: translateY(-50%);*/
 }
+
 .pills ul li {
 	background-color: white;
-	margin-top: 10px;
+
+	/*margin-top: 10px;*/
+}
+@media(min-width: 700px) {
+
+	.nav-pills > li > a {
+	top: 50%;
+	transform: translateY(-50%);
+	};
+
 }
 .nav-pills > li {
 	width: 132px;
@@ -17,6 +34,8 @@
     text-align:center;
 }
 .nav-pills > li > a {
+	top: 50%;
+	transform: translateY(-50%);
 	color: black;
 	background-color: gainsboro;
 	border-radius: 0px;

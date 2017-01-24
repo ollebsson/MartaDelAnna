@@ -1,7 +1,9 @@
-<div class="modal-header">
-	<a class="close" data-dismiss="modal" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span></a>
-	<h4 class="modal-title">GET IN TOUCH</h4>
-	<h4>-</h4>
+<div class="container-fluid">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span></a>
+		<h4 class="modal-title">GET IN TOUCH</h4>
+		<h4>-</h4>
+	</div>
 </div>
 <div class="modal-body">
 
@@ -62,7 +64,7 @@
 						<p>Bokgatan 10, Malmö, Sweden</p>
 					</div>
 
-					<div class="col-sm-5 col-xs-24">
+					<div class="col-sm-6 col-xs-24">
 						<h5>EMAIL ME</h5>
 						<a ng-href="mailto:marta.dellanna@outlook.com">marta.dellanna@outlook.com</a>
 					</div>
@@ -79,16 +81,25 @@
 	</form>
 
 </div>
-<div class="modal-footer">
-	<!-- "Ok" button is disabled if user has not selected an option! -->
-	<p>{{ notification }}</p>	
-	<button
-	disabled="false"
-	id="btn"
-	class="btn"
-	type="button"
-	ng-click="ok()"
-	ng-disabled="form.$invalid || form.$required"
-	>SUBMIT</button>
-	<button class="btn" type="button" ng-click="cancel()">CANCEL</button>
+<div class="container-fluid">
+	<div class="modal-footer">
+
+		<p>{{ notification }}</p>	
+		<div class="col-xs-12 col-sm-6 col-sm-offset-12">
+		<!-- "Ok" button is disabled if user has not selected an option! -->
+			<button
+			disabled="false"
+			id="btn"
+			class="btn"
+			type="button"
+			ng-click="ok()"
+			ng-disabled="form.$invalid || form.$required"
+			>SUBMIT</button>
+
+		</div>
+			<div class="col-xs-12 col-sm-6 col-sm-offset">
+				<button class="btn" type="button" ng-click="cancel()">CANCEL</button>
+			</div>
+		</div>
+	</div>
 </div>

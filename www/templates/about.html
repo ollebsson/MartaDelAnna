@@ -1,9 +1,9 @@
 <carousel></carousel>
 
 <div ng-controller="tabs">
-  <uib-tabset type="pills" class="tabs">
+  <uib-tabset type="pills" class="tabs" id="about-tabs">
 
-  <uib-tab heading="PROCESS">
+  <uib-tab heading="PROCESS" style="height: {{ heading }}">
 	  <article>
 			<div class="container" id="home-columns">
 				<div class="row">
@@ -93,7 +93,7 @@
 		</div>
 	</uib-tab>
 
-	<uib-tab heading="THIS IS ME">
+	<uib-tab heading="THIS IS ME" style="height: {{ heading }};">
 		<div class="container-fluid me">
 		<h3>THIS IS ME</h3>
 						-

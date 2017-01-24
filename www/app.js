@@ -25,6 +25,10 @@ app.config(["$routeProvider", "$locationProvider", function($routeProvider, $loc
 	.when("/portfolio/:id",{
 		templateUrl: "templates/detailView.html",
 		controller: "detailViewCtrl",
+	})	
+	.when("/contact",{
+		templateUrl: "templates/contact.html",
+		controller: "contactCtrl",
 	})
 	.otherwise({
 		templateUrl: "templates/home.html"
