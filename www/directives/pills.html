@@ -195,42 +195,21 @@
   </uib-tab>
 
   <uib-tab heading="GRAPHIC" ng-click="setTab('GRAPHIC')" style="height:{{ heading }};">
-    <div class="container">
-      <div class="row list-view">
-          <a class="portfolio-link" ng-href="/portfolio/{{graphic[0]._id}}">
-            <div class="col-xs-24 col-sm-7 third-row">
-              <div style="background-image: url({{ graphic[0].media[0] }})" class="row-content">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ graphic[0].title }}</bold></h4>
-                  <p>{{ graphic[0].categories }}</p>
+    <div class="container list-view">
+      <div class="row">
+            <div ng-repeat="item in graphic">
+              <a class="portfolio-link" ng-href="/portfolio/{{graphic[$index]._id}}">
+                <div class="col-xs-24 col-sm-12 third-row">
+                  <div style="background-image: url({{ graphic[$index].media[0] }})" class="row-content" id="no-offset">
+                    <div class="title-box">
+                      <h4 class="item-title"><bold>{{ graphic[$index].title }}</bold></h4>
+                      <p>{{ graphic[$index].categories }}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </a>
-
-          <a class="portfolio-link" ng-href="/portfolio/{{graphic[1]._id}}">
-            <div class="col-xs-24 col-sm-12 third-row">
-              <div style="background-image: url({{ graphic[1].media[0] }})" class="row-content" id="no-offset">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ graphic[1].title }}</bold></h4>
-                  <p>{{ graphic[1].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="portfolio-link" ng-href="/portfolio/{{graphic[2]._id}}">
-            <div class="col-xs-24 col-sm-12 third-row">
-              <div style="background-image: url({{ graphic[2].media[0] }})" class="row-content" id="no-offset">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ graphic[2].title }}</bold></h4>
-                  <p>{{ graphic[2].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-      </div>
-    </div>
+        </div>
   </uib-tab>
 
   <uib-tab heading="PRODUCTS" ng-click="setTab('PRODUCTS')" style="height:{{ heading }};">
