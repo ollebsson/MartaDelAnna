@@ -16,7 +16,8 @@ module.exports = function(mongoose){
     paragraph6: {type: String, required: false},
     media: {type: Array, required: false},
     url: {type: Array, required: false},
-    urlName: {type: String, required: false}
+    urlName: {type: String, required: false},
+    designer: {type: String, required: false}
   });
 
   return mongoose.model("Item", ItemSchema);

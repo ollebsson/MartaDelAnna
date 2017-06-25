@@ -14,12 +14,14 @@
 			<p> {{ item.paragraph5 }} </p>
 			<p> {{ item.paragraph6 }} </p>
 		</div>
-		<div class="col-sm-12 col-md-8 col-md-offset-8 item-properties">
+		<div ng-switch="designer" class="col-sm-12 col-md-8 col-md-offset-8 item-properties">
+
 			<p>CATEGORIES: {{ item.categories}}</p>
-			<p>INTERIOR ARCHITECTS: {{ item.architects }}</p>
+			<p ng-switch-when="undefined">ARCHITECTS: {{ item.architects }}</p>
 			<p>RELEASED: {{ item.released }}</p>
 			<p>PLACED: {{ item.placed }}</p>
 			<p>CLIENT: {{ item.client }}</p>
+			<p ng-switch-when="MARTA DELL’ANNA">DESIGNER: {{ item.designer }}</p>
 		</div>
 		<div class="slide-show">
 			<div class="slide-show-content col-xs-20 col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-4 col-xs-offset-2" style="{{ slideShow }}; ">
