@@ -74,13 +74,15 @@ app.directive('pills', [ function() {
         });
       }
       function loadGraphic(data) {
-        var scenography = data || Item.get({categories:"GRAPHIC"},function(data){
+        var graphic = data || Item.get({categories:"GRAPHIC"},function(data){
 
-        $scope.scenography = scenography;
+        $scope.graphic = graphic;
         });
-        var additionalItems = data || Item.get({categories:"PRODUCT", title: {$ne: "EL NINO"} }, function (data) {
+
+        var additionalProducts = data || Item.get({ title: {$ne: 'IL GARDINO'}}, function(data) {
           console.log(data);
-        })
+        });
+
       }
       function loadProduct(data) {
         var product = data || Item.get({categories:"PRODUCT"},function(data){
