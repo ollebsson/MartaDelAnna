@@ -1,9 +1,16 @@
+app.directive('pills', [ function() {
+
+
+  return {
+    templateUrl: '/directives/pills.html',
+    controller: ['$scope', '$route', 'Item',  function($scope, $route, Item) {
+
+      $scope.carouselCaption = { title: "PORTFOLIO", text1: 'ALL CATEGORIES' };
 
       // $scope.backgrounds = { image: ["img/backgrounds/portfolio.jpg"] };
       // $scope.carouselCaption = { title: "PORTFOLIO", text1: 'ALL CATEGORIES' };
       // console.log($scope.heading);
-     
-      // $('.nav-pills').css('height', $scope.heading );
+
       $scope.setTab = function(category) {
         $scope.carouselCaption = { title: "PORTFOLIO", text1: category };
       }
@@ -66,11 +73,16 @@
         $scope.interior = interior;
         });
       }
-      function loadScenography(data) {
-        var scenography = data || Item.get({categories:"SCENOGRAPHY"},function(data){
+      function loadGraphic(data) {
+        var graphic = data || Item.get({categories:"GRAPHIC"},function(data){
 
-        $scope.scenography = scenography;
+        $scope.graphic = graphic;
         });
+
+        var additionalProducts = data || Item.get({categories: "PRODUCT"}, {$ne: { title: 'IL GARDINO'}}, function(data) {
+          console.log(data);
+        });
+
       }
       function loadProduct(data) {
         var product = data || Item.get({categories:"PRODUCT"},function(data){
@@ -82,4 +94,7 @@
       loadInterior();
       loadScenography();
       loadProduct();
+
+    }]
+  };
 }]);

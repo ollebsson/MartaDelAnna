@@ -1,248 +1,100 @@
-<uib-tabset type="pills" class="pills">
+app.directive('pills', [ function() {
 
 
-  <uib-tab heading="ALL" ng-click="setTab('ALL CATEGORIES')" style="height:{{ heading }};">
+  return {
+    templateUrl: '/directives/pills.html',
+    controller: ['$scope', '$route', 'Item',  function($scope, $route, Item) {
+
+      $scope.carouselCaption = { title: "PORTFOLIO", text1: 'ALL CATEGORIES' };
+
+      // $scope.backgrounds = { image: ["img/backgrounds/portfolio.jpg"] };
+      // $scope.carouselCaption = { title: "PORTFOLIO", text1: 'ALL CATEGORIES' };
+      // console.log($scope.heading);
+
+      $scope.setTab = function(category) {
+        $scope.carouselCaption = { title: "PORTFOLIO", text1: category };
+      }
     
-    <div class="container list-view">
+      function loadItems(data) {
+        var items = data || Item.get(function(data) {
+        // First row 
 
-      <div class="row">
-        <div ng-repeat="item in firstRow">
-          <a class="portfolio-link" ng-href="/portfolio/{{firstRow[$index]._id}}">
-            <div class="col-sm-6 col-xs-24 first-row">
-              <div class="row-content" style="background-image: url({{ firstRow[$index].media[0] }})">
-                <div class="title-box">
-            <h4 class="item-title"><bold>{{ firstRow[$index].title }}</bold></h4>
-            <p>{{ firstRow[$index].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        var first = [];
+        for (var i = 0; i < 4; i++) {
+          first.push(items[i]);
+        }
+        $scope.firstRow = first;
 
-      <div class="row">
-        <div ng-repeat="item in secondRow">
-          <a class="portfolio-link" ng-href="/portfolio/{{secondRow[$index]._id}}">
-            <div class="col-sm-12 col-xs-24 second-row">
-              <div class="row-content" style="background-image: url({{ secondRow[$index].media[0] }})">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ secondRow[$index].title }}</bold></h4>
-                  <p>{{ secondRow[$index].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        // Second row
 
-      <div class="row">
-        <div ng-repeat="item in thirdRow">
-          <a class="portfolio-link" ng-href="/portfolio/{{thirdRow[$index]._id}}">
-            <div class="col-sm-12 col-xs-24 third-row">
-              <div class="row-content"  id="no-offset" style="background-image: url({{ thirdRow[$index].media[0] }})">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ thirdRow[$index].title }}</bold></h4>
-                  <p>{{ thirdRow[$index].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        var second = [];
+        for (var j = 4; j < 6; j++) {
+          second.push(items[j]);
+        }
+        $scope.secondRow = second;
 
-      <div class="row">
-        <a class="portfolio-link" ng-href="/portfolio/{{fourthRow._id}}">
-          <div class="col-xs-24 col-sm-8 fourth-row">
-            <div class="row-content" id="no-offset" style="background-image: url({{ fourthRow.media[0] }})">
-              <div class="title-box">
-                <h4 class="item-title"><bold>{{ fourthRow.title }}</bold></h4>
-                <p>{{ fourthRow.categories }}</p>
-              </div>
-            </div>
-          </div>
-        </a>
+        var third = [];
+        for (var k = 6; k < 8; k++) {
+          third.push(items[k]);
+        }
+        $scope.thirdRow = third;
 
-        <a class="portfolio-link" ng-href="/portfolio/{{fifthRow._id}}">
-          <div class="col-sm-16 col-xs-24 fourth-row">
-              <div class="row-content" style="background-image: url({{ fifthRow.media[0] }})">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ fifthRow.title }}</bold></h4>
-                  <p>{{ fifthRow.categories }}</p>
-                </div>
-            </div>
-          </div>
-        </a>
-      </div>
+        $scope.fourthRow = items[8];
 
-      <div class="row">
-        <a class="portfolio-link" ng-href="/portfolio/{{sixthRow._id}}">
-          <div class="col-xs-24 col-sm-8 fifth-row">
-            <div class="row-content"  id="no-offset" style="background-image: url({{ sixthRow.media[0] }})">
-              <div class="title-box">
-                <h4 class="item-title"><bold>{{ sixthRow.title }}</bold></h4>
-                <p>{{ sixthRow.categories }}</p>
-              </div>
-            </div>
-          </div>
-        </a> 
+        $scope.fifthRow = items[9];
 
-        <a class="portfolio-link" ng-href="/portfolio/{{seventhRow._id}}">
-          <div class="col-xs-24 col-sm-10 fifth-row">
-            <div class="row-content" style="background-image: url({{ seventhRow.media[0] }})">
-              <div class="title-box">
-                <h4 class="item-title"><bold>{{ seventhRow.title }}</bold></h4>
-                <p>{{ seventhRow.categories }}</p>
-              </div>
-            </div>
-          </div>
-        </a> 
+        $scope.sixthRow = items[10];
 
-        <a class="portfolio-link" ng-href="/portfolio/{{eightRow._id}}">
-          <div class="col-xs-24 col-sm-6 fifth-row">
-            <div class="row-content" style="background-image: url({{ eightRow.media[0] }})">
-              <div class="title-box">
-                <h4 class="item-title"><bold>{{ eightRow.title }}</bold></h4>
-                <p>{{ eightRow.categories }}</p>
-              </div>
-            </div>
-          </div>
-        </a> 
-      </div>
+        $scope.seventhRow = items[11];
 
-      <div class="row">
-        <div ng-repeat="item in ninthRow">
-          <a class="portfolio-link" ng-href="/portfolio/{{ninthRow[$index]._id}}">
-            <div class="col-sm-12 col-xs-24 sixth-row">
-              <div style="background-image: url({{ ninthRow[$index].media[0] }})" class="row-content">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ ninthRow[$index].title }}</bold></h4>
-                  <p>{{ ninthRow[$index].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        $scope.eightRow = items[12];
 
-      <div class="row">
-        <a class="portfolio-link" ng-href="/portfolio/{{tenthRow._id}}">
-          <div class="col-xs-24 col-sm-10 seventh-row">
-            <div class="row-content" id="no-offset" style="background-image: url({{ tenthRow.media[0] }})">
-              <div class="title-box">
-                <h4 class="item-title"><bold>{{ tenthRow.title }}</bold></h4>
-                <p>{{ tenthRow.categories }}</p>
-              </div>
-            </div>
-          </div>
-        </a>
+        var ninth = [];
+        for (var l = 13; l < 15; l++) {
+          ninth.push(items[l]);
+        }
+        $scope.ninthRow = ninth;
 
-        <a class="portfolio-link" ng-href="/portfolio/{{eleventhRow._id}}">
-          <div class="col-xs-24 col-sm-14 seventh-row">
-              <div class="row-content" id="no-offset" style="background-image: url({{ eleventhRow.media[0] }})">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ eleventhRow.title }}</bold></h4>
-                  <p>{{ eleventhRow.categories }}</p>
-                </div>
-            </div>
-          </div>
-        </a>
-      </div>
+        $scope.tenthRow = items[15];
+        $scope.eleventhRow = items[16];
+        
+        var rest = [];
+        for (var i = 17; i < items.length; ++i) {
+          rest.push(items[i]);
+        }
+        $scope.restRow = rest;
 
-      <div class="row">
-        <div ng-repeat="item in restRow">
-          <a class="portfolio-link" ng-href="/portfolio/{{restRow[$index]._id}}">
-            <div class="col-sm-8 col-xs-24 first-row">
-              <div class="row-content" id="no-offset" style="background-image: url({{ restRow[$index].media[0] }})">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ restRow[$index].title }}</bold></h4>
-                  <p>{{ restRow[$index].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        });
+      }
 
-    </div>
+      function loadInterior(data) {
+        var interior = data || Item.get({categories:"INTERIOR"},function(data){
 
-      
-  </uib-tab>
+        $scope.interior = interior;
+        });
+      }
+      function loadGraphic(data) {
+        var graphic = data || Item.get({categories:"GRAPHIC"},function(data){
 
-  <uib-tab heading="INTERIOR" ng-click="setTab('INTERIOR')" style="height:{{ heading }};">
+        $scope.graphic = graphic;
+        });
 
-    <div>
+        var additionalProducts = data || Item.get({categories: "PRODUCT"}, {$ne: { title: 'IL GARDINO'}}, function(data) {
+          console.log(data);
+        });
 
-      <div class="container list-view">
+      }
+      function loadProduct(data) {
+        var product = data || Item.get({categories:"PRODUCT"},function(data){
 
-      <div class="row">
-        <div ng-repeat="item in interior">
-          <a class="portfolio-link" ng-href="/portfolio/{{interior[$index]._id}}">
-            <div class="col-sm-6 col-xs-24 first-row" id="no-offset">
-              <div style="background-image: url({{ interior[$index].media[0] }})" class="row-content">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ interior[$index].title }}</bold></h4>
-                  <p>{{ interior[$index].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        $scope.product = product;
+        });
+      }
+      loadItems();
+      loadInterior();
+      loadScenography();
+      loadProduct();
 
-      </div>
-    </div>
-
-  </uib-tab>
-
-  <uib-tab heading="SCENOGRAPHY" ng-click="setTab('SCENOGRAPHY')" style="height:{{ heading }};">
-    <div class="container">
-      <div class="row list-view">
-          <a class="portfolio-link" ng-href="/portfolio/{{scenography[0]._id}}">
-            <div class="col-xs-24 col-sm-7 third-row">
-              <div style="background-image: url({{ scenography[0].media[0] }})" class="row-content">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ scenography[0].title }}</bold></h4>
-                  <p>{{ scenography[0].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a class="portfolio-link" ng-href="/portfolio/{{scenography[1]._id}}">
-            <div class="col-xs-24 col-sm-12 third-row">
-              <div style="background-image: url({{ scenography[1].media[0] }})" class="row-content" id="no-offset">
-                <div class="title-box">
-                  <h4 class="item-title"><bold>{{ scenography[1].title }}</bold></h4>
-                  <p>{{ scenography[1].categories }}</p>
-                </div>
-              </div>
-            </div>
-          </a>
-      </div>
-    </div>
-  </uib-tab>
-
-  <uib-tab heading="PRODUCTS" ng-click="setTab('PRODUCTS')" style="height:{{ heading }};">
-
-    <div class="container list-view">
-
-          <div class="row">
-            <div ng-repeat="item in product">
-              <a class="portfolio-link" ng-href="/portfolio/{{product[$index]._id}}">
-                <div class="col-xs-24 col-sm-12 third-row">
-                  <div style="background-image: url({{ product[$index].media[0] }})" class="row-content" id="no-offset">
-                    <div class="title-box">
-                      <h4 class="item-title"><bold>{{ product[$index].title }}</bold></h4>
-                      <p>{{ product[$index].categories }}</p>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-        </div>
-
-    </div>
-
-  </uib-tab>
-
-</uib-tabset>
+    }]
+  };
+}]);
