@@ -79,17 +79,21 @@ app.directive('pills', [ function() {
             Item.get({ categories: 'PRODUCT', title: {$ne: 'IL GARDINO'}}, function(products) {
 
               $scope.graphic = data.concat(products)
-                      console.log($scope.graphic);
             });
             
         });
 
       }
       function loadProduct(data) {
-        var product = data || Item.get({categories:"PRODUCT"},function(data){
+        Item.get({categories:"PRODUCT"},function(data){
 
-        $scope.product = product;
+            Item.get({ categories: 'GRAPHIC', title: 'SMART PACKAGING'}, function(products) {
+
+              $scope.product = data.concat(products);
+            });
+            
         });
+        
       }
       loadItems();
       loadInterior();
