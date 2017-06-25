@@ -21,17 +21,32 @@ app.controller('carouselCtrl',  ['$scope', 'Item', '$routeParams',  function($sc
 		image: $scope.item.media[id],
 		id: currIndex++
 		});
-		console.log(currIndex);
+		console.log(slides);
 		// console.log(slides);
 	};
-
 	$scope.$watch('item', function() {
 
 		if($scope.item !== undefined) {
 			for (var i = 0; i < $scope.item.media.length; ++i) {
+				if($scope.item.video) {
+					slides.push({
+						video: $scope.item.video,
+						id: currIndex++
+					});
+					console.log(slides);
+				}
 			  $scope.addSlide(i);
 
 			}
 		}
 	});
+	// $scope.$watch('item', function() {
+
+	// 	if($scope.item !== undefined) {
+	// 		for (var i = 0; i < $scope.item.media.length; ++i) {
+	// 		  $scope.addSlide(i);
+
+	// 		}
+	// 	}
+	// });
 }]);
