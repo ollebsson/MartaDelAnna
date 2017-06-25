@@ -194,7 +194,7 @@
 
   </uib-tab>
 
-  <uib-tab heading="GRAPHIC" ng-click="setTab('SCENOGRAPHY')" style="height:{{ heading }};">
+  <uib-tab heading="GRAPHIC" ng-click="setTab('GRAPHIC')" style="height:{{ heading }};">
     <div class="container">
       <div class="row list-view">
           <a class="portfolio-link" ng-href="/portfolio/{{graphic[0]._id}}">
@@ -214,6 +214,17 @@
                 <div class="title-box">
                   <h4 class="item-title"><bold>{{ graphic[1].title }}</bold></h4>
                   <p>{{ graphic[1].categories }}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a class="portfolio-link" ng-href="/portfolio/{{graphic[2]._id}}">
+            <div class="col-xs-24 col-sm-12 third-row">
+              <div style="background-image: url({{ graphic[2].media[0] }})" class="row-content" id="no-offset">
+                <div class="title-box">
+                  <h4 class="item-title"><bold>{{ graphic[2].title }}</bold></h4>
+                  <p>{{ graphic[2].categories }}</p>
                 </div>
               </div>
             </div>
