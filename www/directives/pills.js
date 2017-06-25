@@ -90,7 +90,7 @@ app.directive('pills', [ function() {
       }
       loadItems();
       loadInterior();
-      loadScenography();
+      loadGraphic();
       loadProduct();
 
     }]
