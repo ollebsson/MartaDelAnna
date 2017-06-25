@@ -73,11 +73,14 @@ app.directive('pills', [ function() {
         $scope.interior = interior;
         });
       }
-      function loadScenography(data) {
-        var scenography = data || Item.get({categories:"SCENOGRAPHY"},function(data){
+      function loadGraphic(data) {
+        var scenography = data || Item.get({categories:"GRAPHIC"},function(data){
 
         $scope.scenography = scenography;
         });
+        var additionalItems = data || Item.get({categories:"PRODUCT"}, {$ne: { title: "EL NINO"} }, function (data) {
+          console.log(data);
+        })
       }
       function loadProduct(data) {
         var product = data || Item.get({categories:"PRODUCT"},function(data){
