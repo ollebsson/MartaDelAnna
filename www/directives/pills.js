@@ -78,7 +78,7 @@ app.directive('pills', [ function() {
 
         $scope.scenography = scenography;
         });
-        var additionalItems = data || Item.get({categories:"PRODUCT"}, {$ne: { title: "EL NINO"} }, function (data) {
+        var additionalItems = data || Item.get({categories:"PRODUCT"}, { title: {$ne :"EL NINO"} }, function (data) {
           console.log(data);
         })
       }
